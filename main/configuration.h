@@ -49,7 +49,7 @@ void ttn_register(void (*callback)(uint8_t message));
 #define DEBUG_PORT              Serial      // Serial debug port
 #define SERIAL_BAUD             115200      // Serial debug baud rate
 #define SLEEP_BETWEEN_MESSAGES  0           // Do sleep between messages
-#define SEND_INTERVAL           10000      // Sleep for these many millis
+#define SEND_INTERVAL           60000       // Sleep for these many millis
 #define MESSAGE_TO_SLEEP_DELAY  5000        // Time after message before going to sleep
 #define LOGO_DELAY              5000        // Time to show logo on first boot
 #define LORAWAN_PORT            1           // Port the messages will be sent to
@@ -85,6 +85,9 @@ void ttn_register(void (*callback)(uint8_t message));
 #define LED_PIN            25
 #define trigPin            13                                         // Defino pin para 'Trig' - JSN-SR04T
 #define echoPin            12                                         // Defino pin para 'Echo' - JSN-SR04T
+#define MAX_DISTANCE       400                                        // En 'MAX_DISTANCE' guardaré de forma inmutable la máxima distancia a la que funciona el sensor, unos 400 a 500 cm
+#define VBAT               35                                         // Defino pin 'vbatPin' - Voltaje
+#define BUTTONPIN          23                                         // Defino pin para el botón
 
 // -----------------------------------------------------------------------------
 // OLED
@@ -104,10 +107,17 @@ void ttn_register(void (*callback)(uint8_t message));
 #define DIO0_GPIO       26
 #define DIO1_GPIO       33
 #define DIO2_GPIO       32
-#define VBAT            35                               // Defino pin 'vbatPin' - Voltaje
+
 // -----------------------------------------------------------------------------
 // AXP192 (Rev1-specific options)
 // -----------------------------------------------------------------------------
 
 #define LORA_POWER_CTRL_CH    2
 // #define PMU_IRQ               35
+
+//
+// OLED parameters
+//
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
+#define OLED_RESET    -1

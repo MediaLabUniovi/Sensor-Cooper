@@ -21,93 +21,103 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include <Wire.h>
-#include "SSD1306Wire.h"
-#include "OLEDDisplay.h"
-#include "images.h"
-#include "fonts.h"
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+#include <NewPing.h>
+//#include "images.h"
 
-#define SCREEN_HEADER_HEIGHT    14
+// Define sensor function
+NewPing sonar_screen = NewPing(trigPin, echoPin, MAX_DISTANCE);
 
-SSD1306Wire * display;
-uint8_t _screen_line = SCREEN_HEADER_HEIGHT - 1;
+// Define OLED function
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
-void _screen_header() {
-    char buffer[20];
+// BOTÓN
+int buttonState = 0;
 
-    // Message count
-    snprintf(buffer, sizeof(buffer), "#%03d", get_count() % 1000);
-    display->setTextAlignment(TEXT_ALIGN_LEFT);
-    display->drawString(0, 2, buffer);
+// Variables used for reading the voltage
+float Vbat_screen;
 
-//  RELAIS STATUS
-  if (relais_on == true)
-  {
-    display->setTextAlignment(TEXT_ALIGN_LEFT);
-    display->drawString(65, 2, ("RELAIS ON"));
-  }
-  else
-  {
-    display->setTextAlignment(TEXT_ALIGN_LEFT);
-    display->drawString(65, 2, ("RELAIS OFF"));
-  }
-
-}
-
-void screen_show_logo() {
-    uint8_t x = (display->getWidth() - TTN_IMAGE_WIDTH) / 2;
-    uint8_t y = SCREEN_HEADER_HEIGHT + (display->getHeight() - SCREEN_HEADER_HEIGHT - TTN_IMAGE_HEIGHT) / 2 + 1;
-    display->drawXbm(x, y, TTN_IMAGE_WIDTH, TTN_IMAGE_HEIGHT, TTN_IMAGE);
-}
-
-void screen_off() {
-    display->displayOff();
-}
-
-void screen_on() {
-    display->displayOn();
-}
-
-void screen_clear() {
-    display->clear();
-}
-
-void screen_print(const char * text, uint8_t x, uint8_t y, uint8_t alignment) {
-    DEBUG_MSG(text);
-    display->setTextAlignment((OLEDDISPLAY_TEXT_ALIGNMENT) alignment);
-    display->drawString(x, y, text);
-}
-
-void screen_print(const char * text, uint8_t x, uint8_t y) {
-    screen_print(text, x, y, TEXT_ALIGN_LEFT);
-}
-
-void screen_print(const char * text) {
-    display->print(text);
-    if (_screen_line + 8 > display->getHeight()) {
-        // scroll
-    }
-    _screen_line += 8;
-    screen_loop();
-}
-
-void screen_update() {
-    display->display();
-}
-
+// SETUP OLED -------------------------------------------------------------------------------------------------------------------------------------------------
 void screen_setup() {
-    // Display instance
-    display = new SSD1306Wire(SSD1306_ADDRESS, I2C_SDA, I2C_SCL);
-    display->init();
-    display->flipScreenVertically();
-    display->setFont(Custom_ArialMT_Plain_10);
+  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+  display.display();
+  delay(5000);                                                             // Pause for 2 seconds to allow the display to initialize
 
-    // Scroll buffer
-    display->setLogBuffer(5, 30);
+  display.clearDisplay();
+  display.setTextSize(3);
+  display.setTextColor(SSD1306_WHITE);
 }
 
-void screen_loop() {
-    display->clear();
-    _screen_header();
-    display->drawLogBuffer(0, SCREEN_HEADER_HEIGHT);
-    display->display();
+// FUNCIÓN PROPIA --------------------------------------------------------------------------------------------------------------------------------------------
+void muestra_informacion_OLED(int interval){
+  static long startTime = 0;
+  
+  buttonState = digitalRead(BUTTONPIN);                                    // Read the state of the button
+  Vbat_screen = (float)(analogRead(VBAT)) / 4095*2*3.3*1.1;
+
+  if(buttonState == LOW && startTime == 0){                                // If the button is pressed and it's the first press
+    startTime = millis();                                                  // Record the start time
+    int distancia = sonar_screen.ping_cm(); // ==================================================================================================================================
+    display.clearDisplay();                                                // Limpio el display a cada ejecución del bucle
+
+    // Bloques de impresión de texto en el OLED y monitor serial
+
+    // "Dist: "
+    Serial.print("Dist: ");
+    display.setTextSize(2);
+    display.setCursor(0,20);
+    display.print("Dist: ");
+
+    // "distancia = sonar.ping_cm()"
+    Serial.print(sonar_screen.ping_cm());
+    if(distancia > 24){
+      display.setTextSize(2);
+      display.setCursor(60,20);
+      distancia = sonar_screen.ping_cm();
+      display.print(distancia);
+      display.display();
+    }
+    else if(distancia <= 24){
+      display.setTextSize(2);
+      display.setCursor(60,20);
+      display.print("NOT");
+      display.display();
+    }
+    
+    // "cm"
+    Serial.println("cm");
+    display.setTextSize(2);
+    display.setCursor(100,20);
+    display.print("cm");
+
+    // "Bat: "
+    Serial.print("Bat: ");
+    display.setTextSize(2);
+    display.setCursor(0,40);
+    display.print("Bat: ");
+
+    // "VBAT"
+    Serial.print(Vbat_screen);
+    display.setTextSize(2);
+    display.setCursor(50,40);
+    display.print(Vbat_screen);
+
+    // "V"
+    Serial.println("V");
+    display.setTextSize(2);
+    display.setCursor(100,40);
+    display.print("V");
+
+    //Serial.println();
+    display.display();                                                     // Display "Text" on the OLED screen
+  }
+
+  if(startTime > 0 && millis() - startTime >= interval){                   // If 2 seconds have passed
+    display.clearDisplay();                                                // Clear the display 'display.clearDisplay()'
+    display.setCursor(0,0);
+    display.print("");                                                     // Imito que la pantalla está apagada (y lo está al ser OLED)
+    display.display();                                                     // Turn off the LED
+    startTime = 0;                                                         // Reset the start time for the next press
+  }
 }

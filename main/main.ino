@@ -71,7 +71,7 @@ void sleep() {
   // Show the going to sleep message on the screen
   char buffer[20];
   snprintf(buffer, sizeof(buffer), "Sleeping in %3.1fs\n", (MESSAGE_TO_SLEEP_DELAY / 1000.0));
-  screen_print(buffer);
+  //screen_print(buffer);
 
   // Wait for MESSAGE_TO_SLEEP_DELAY millis to sleep
   delay(MESSAGE_TO_SLEEP_DELAY);
@@ -88,18 +88,18 @@ void sleep() {
 }
 
 void callback(uint8_t message) {
-  if (EV_JOINING == message) screen_print("Joining TTN...\n") , Serial.println("Joining TTN...\n");
-  if (EV_JOINED == message) screen_print("TTN joined!\n") , Serial.println("TTN joined!\n");
-  if (EV_JOIN_FAILED == message) screen_print("TTN join failed\n") , Serial.println("TTN join failed\n");
-  if (EV_REJOIN_FAILED == message) screen_print("TTN rejoin failed\n") , Serial.println("TTN rejoin failed\n");
-  if (EV_RESET == message) screen_print("Reset TTN connection\n") , Serial.println("Reset TTN connection\n");
-  if (EV_LINK_DEAD == message) screen_print("TTN link dead\n") , Serial.println("TTN link dead\n");
-  if (EV_ACK == message) screen_print("ACK received\n") , Serial.println("ACK received\n");
-  if (EV_PENDING == message) screen_print("Message discarded\n") , Serial.println("Message discarded\n");
-  if (EV_QUEUED == message) screen_print("Message queued\n") , Serial.println("Message queued\n");
+  if (EV_JOINING == message)Serial.println("Joining TTN...\n");
+  if (EV_JOINED == message)Serial.println("TTN joined!\n");
+  if (EV_JOIN_FAILED == message)Serial.println("TTN join failed\n");
+  if (EV_REJOIN_FAILED == message)Serial.println("TTN rejoin failed\n");
+  if (EV_RESET == message)Serial.println("Reset TTN connection\n");
+  if (EV_LINK_DEAD == message)Serial.println("TTN link dead\n");
+  if (EV_ACK == message)Serial.println("ACK received\n");
+  if (EV_PENDING == message)Serial.println("Message discarded\n");
+  if (EV_QUEUED == message)Serial.println("Message queued\n");
 
   if (EV_TXCOMPLETE == message) {
-    screen_print("Message sent\n") , Serial.println(F("EV_TXCOMPLETE (includes waiting for RX windows)"));
+    //screen_print("Message sent\n") , Serial.println(F("EV_TXCOMPLETE (includes waiting for RX windows)"));
     if (LMIC.txrxFlags & TXRX_ACK)
               Serial.println(F("Received ack"));
             if (LMIC.dataLen) {
@@ -134,7 +134,7 @@ void callback(uint8_t message) {
 
   if (EV_RESPONSE == message) {
 
-    screen_print("[TTN] Response: ");
+    //screen_print("[TTN] Response: ");
 
     size_t len = ttn_response_len();
     uint8_t data[len];
@@ -143,9 +143,9 @@ void callback(uint8_t message) {
     char buffer[6];
     for (uint8_t i = 0; i < len; i++) {
       snprintf(buffer, sizeof(buffer), "%02X", data[i]);
-      screen_print(buffer);
+      //screen_print(buffer);
     }
-    screen_print("\n");
+    //screen_print("\n");
   }
 }
 
@@ -201,6 +201,9 @@ void setup() {
 // SET BUILT-IN LED TO OUTPUT
   pinMode(LED_PIN, OUTPUT);
 
+// BOTON
+  pinMode(BUTTONPIN, INPUT_PULLUP);
+
 // // SET RELAIS_PIN TO OUTPUT
 //   pinMode(RELAIS_PIN, OUTPUT);
 
@@ -211,18 +214,18 @@ void setup() {
   LoRa_setup();
 
 // Show logo on first boot
-  if (0 == count) {
+/*  if (0 == count) {
     screen_print(APP_NAME " " APP_VERSION, 0, 0 );
     screen_show_logo();
     screen_update();
     delay(LOGO_DELAY);
-}
+}*/
 
 // TTN setup
    if (!ttn_setup()) {
-   screen_print("[ERR] Radio module not found!\n");
+   // screen_print("[ERR] Radio module not found!\n");
    delay(MESSAGE_TO_SLEEP_DELAY);
-   screen_off();
+   // screen_off();
    sleep_forever();
 }
 
@@ -234,9 +237,9 @@ void setup() {
 
 
 
-void loop() {
+void loop(){
   ttn_loop();
-  screen_loop();
+  muestra_informacion_OLED(2000);
   
 // Send every SEND_INTERVAL millis
   static uint32_t last = 0;
