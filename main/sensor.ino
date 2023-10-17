@@ -27,7 +27,6 @@ void LoRa_setup(){
 //
 
 void buildPacket(uint8_t txBuffer[4]){
-  char buffer[40];
 
   //
   // Distancia -----------------------------------------------------------------------------------------------------------------------------------------------
@@ -35,8 +34,6 @@ void buildPacket(uint8_t txBuffer[4]){
   int distance = sonar.ping_cm();
   sprintf(LoRa_char, "Distancia: %d", distance);
   Serial.println(LoRa_char);
-
-  snprintf(buffer, sizeof(buffer), "Distancia: %d\n", distance);
 
   txBuffer[0] = highByte(distance);                       // Si la distancia supera los 255, entonces se acumula en 'highByte()' una unidad por cada vez que pase
   txBuffer[1] = lowByte(distance);                        // Para distancia, que puede estar entre 0 y 400, 'lowByte()' me da valores de 0 a 255. Si 'distance' supera n*256, entonces 'distance' = highByte()*256 + lowByte()
@@ -47,8 +44,6 @@ void buildPacket(uint8_t txBuffer[4]){
 
   sprintf(LoRa_char, "Voltaje: %f", Vbat);
   Serial.println(LoRa_char);
-
-  snprintf(buffer, sizeof(buffer), "Voltaje: %.3f\n", Vbat);
 
   int ent = (int)Vbat;                                     // Parte entera del porcentaje de batería. Si obtengo 3.45, me quedo con 3
   int dec = (Vbat - floor(Vbat))*100;                      // Extracción de 2 decimales y conversión a entero. Si obtengo 3.45, 3.45 - 3 = 0.45 y, luego, 0.45 * 100 = 45

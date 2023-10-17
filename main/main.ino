@@ -78,16 +78,8 @@ void send() {
 void sleep() {
 #if SLEEP_BETWEEN_MESSAGES == 1
 
-  // Show the going to sleep message on the screen
-  char buffer[20];
-  snprintf(buffer, sizeof(buffer), "Sleeping in %3.1fs\n", (MESSAGE_TO_SLEEP_DELAY / 1000.0));
-  //screen_print(buffer);
-
   // Wait for MESSAGE_TO_SLEEP_DELAY millis to sleep
   delay(MESSAGE_TO_SLEEP_DELAY);
-
-  // Turn off screen
-  screen_off();
 
   // We sleep for the interval between messages minus the current millis
   // this way we distribute the messages evenly every SEND_INTERVAL millis
@@ -125,17 +117,6 @@ void callback(uint8_t message) {
         Serial.println();
       }
     sleep();
-  }
-
-  if (EV_RESPONSE == message){
-    size_t len = ttn_response_len();
-    uint8_t data[len];
-    ttn_response(data, len);
-
-    char buffer[6];
-    for (uint8_t i = 0; i < len; i++) {
-      snprintf(buffer, sizeof(buffer), "%02X", data[i]);
-    }
   }
 }
 
@@ -210,7 +191,7 @@ void setup() {
   // TTN setup
   if(!ttn_setup()){
     delay(MESSAGE_TO_SLEEP_DELAY);
-    screen_off();
+    //screen_off();
     sleep_forever();
   }
 
