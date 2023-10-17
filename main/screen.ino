@@ -23,20 +23,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
-#include <NewPing.h>
 //#include "images.h"
-
-// Define sensor function
-NewPing sonar_screen = NewPing(trigPin, echoPin, MAX_DISTANCE);
 
 // Define OLED function
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
+unsigned long startTime = 0;
 
 // BOTÓN
 int buttonState = 0;
-
-// Variables used for reading the voltage
-float Vbat_screen;
 
 // SETUP OLED -------------------------------------------------------------------------------------------------------------------------------------------------
 void screen_setup() {
@@ -51,14 +45,12 @@ void screen_setup() {
 
 // FUNCIÓN PROPIA --------------------------------------------------------------------------------------------------------------------------------------------
 void muestra_informacion_OLED(int interval){
-  static long startTime = 0;
   
   buttonState = digitalRead(BUTTONPIN);                                    // Read the state of the button
-  Vbat_screen = (float)(analogRead(VBAT)) / 4095*2*3.3*1.1;
 
   if(buttonState == LOW && startTime == 0){                                // If the button is pressed and it's the first press
     startTime = millis();                                                  // Record the start time
-    int distancia = sonar_screen.ping_cm(); // ==================================================================================================================================
+    int distancia = sonar.ping_cm(); // ==================================================================================================================================
     display.clearDisplay();                                                // Limpio el display a cada ejecución del bucle
 
     // Bloques de impresión de texto en el OLED y monitor serial
@@ -70,11 +62,11 @@ void muestra_informacion_OLED(int interval){
     display.print("Dist: ");
 
     // "distancia = sonar.ping_cm()"
-    Serial.print(sonar_screen.ping_cm());
+    Serial.print(sonar.ping_cm());
     if(distancia > 24){
       display.setTextSize(2);
       display.setCursor(60,20);
-      distancia = sonar_screen.ping_cm();
+      distancia = sonar.ping_cm();
       display.print(distancia);
       display.display();
     }
@@ -98,10 +90,10 @@ void muestra_informacion_OLED(int interval){
     display.print("Bat: ");
 
     // "VBAT"
-    Serial.print(Vbat_screen);
+    Serial.print(Vbat);
     display.setTextSize(2);
     display.setCursor(50,40);
-    display.print(Vbat_screen);
+    display.print(Vbat);
 
     // "V"
     Serial.println("V");

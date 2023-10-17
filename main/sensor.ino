@@ -7,18 +7,11 @@
   https://github.com/rwanrooy/TTGO-PAXCOUNTER-LoRa32-V2.1-TTN.git
 ***************************************************************************/
 
-#include <NewPing.h>
-
-// Define sensor function
-NewPing sonar_sensor = NewPing(trigPin, echoPin, MAX_DISTANCE);
-
 //
 // Declaración de variables ---------------------------------------------------------------------------------------------------------------------------------
 //
 
 char LoRa_char[32];                                        // 'char' para imprimir por serial los valores del sensor y batería
-
-float Vbat_sensor;                                                // Voltaje de la batería del conversor AD del ESP32
 
 //
 // Funciones ------------------------------------------------------------------------------------------------------------------------------------------------
@@ -39,7 +32,7 @@ void buildPacket(uint8_t txBuffer[4]){
   //
   // Distancia -----------------------------------------------------------------------------------------------------------------------------------------------
   //
-  int distance = sonar_sensor.ping_cm();
+  int distance = sonar.ping_cm();
   sprintf(LoRa_char, "Distancia: %d", distance);
   Serial.println(LoRa_char);
 
@@ -52,14 +45,13 @@ void buildPacket(uint8_t txBuffer[4]){
   // Batería -------------------------------------------------------------------------------------------------------------------------------------------------
   //
 
-  Vbat_sensor = (float)(analogRead(VBAT)) / 4095*2*3.3*1.1;
-  sprintf(LoRa_char, "Voltaje: %f", Vbat_sensor);
+  sprintf(LoRa_char, "Voltaje: %f", Vbat);
   Serial.println(LoRa_char);
 
-  snprintf(buffer, sizeof(buffer), "Voltaje: %.3f\n", Vbat_sensor);
+  snprintf(buffer, sizeof(buffer), "Voltaje: %.3f\n", Vbat);
 
-  int ent = (int)Vbat_sensor;                                     // Parte entera del porcentaje de batería. Si obtengo 3.45, me quedo con 3
-  int dec = (Vbat_sensor - floor(Vbat_sensor))*100;                      // Extracción de 2 decimales y conversión a entero. Si obtengo 3.45, 3.45 - 3 = 0.45 y, luego, 0.45 * 100 = 45
+  int ent = (int)Vbat;                                     // Parte entera del porcentaje de batería. Si obtengo 3.45, me quedo con 3
+  int dec = (Vbat - floor(Vbat))*100;                      // Extracción de 2 decimales y conversión a entero. Si obtengo 3.45, 3.45 - 3 = 0.45 y, luego, 0.45 * 100 = 45
 
   txBuffer[2] = lowByte(ent);                              // Como la parte entera de batería nunca será más de 255, solo envío su 'lowByte()'
   txBuffer[3] = lowByte(dec);                              // Como voy a coger sólo 2 decimales e hice el truco de multiplicarlo para que sea un entero, cojo el 'lowByte()' ya que el rango de valores es 0 - 99, nunca superando 255

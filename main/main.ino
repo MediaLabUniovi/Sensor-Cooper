@@ -22,9 +22,19 @@
 #include "configuration.h"
 #include "rom/rtc.h"
 #include <Wire.h>
+#include <NewPing.h>
 
 bool ssd1306_found = false;
-bool relais_on = false;
+
+//
+// NewPing config
+//
+NewPing sonar = NewPing(trigPin, echoPin, MAX_DISTANCE);
+
+//
+// Voltaje batería
+//
+float Vbat = (float)(analogRead(VBAT)) / 4095*2*3.3*1.1;
 
 // Message counter, stored in RTC memory, survives deep sleep
 RTC_DATA_ATTR uint32_t count = 0;
@@ -98,44 +108,26 @@ void callback(uint8_t message) {
   if (EV_PENDING == message)Serial.println("Message discarded\n");
   if (EV_QUEUED == message)Serial.println("Message queued\n");
 
-  if (EV_TXCOMPLETE == message) {
-    //screen_print("Message sent\n") , Serial.println(F("EV_TXCOMPLETE (includes waiting for RX windows)"));
+  if (EV_TXCOMPLETE == message){
     if (LMIC.txrxFlags & TXRX_ACK)
-              Serial.println(F("Received ack"));
-            if (LMIC.dataLen) {
-              Serial.print(F("Received "));
-              Serial.print(LMIC.dataLen);
-              Serial.println(F(" bytes of payload"));
-        for (int i = 0; i < LMIC.dataLen; i++) {
-          if (LMIC.frame[LMIC.dataBeg + i] < 0x10) {
+      Serial.println(F("Received ack"));
+      if (LMIC.dataLen) {
+        Serial.print(F("Received "));
+        Serial.print(LMIC.dataLen);
+        Serial.println(F(" bytes of payload"));
+        for (int i = 0; i < LMIC.dataLen; i++){
+          if (LMIC.frame[LMIC.dataBeg + i] < 0x10){
             Serial.print(F("0"));
+          }
+          Serial.print(F("Received payload: "));
+          Serial.print(LMIC.frame[LMIC.dataBeg + i], HEX);
         }
-        Serial.print(F("Received payload: "));
-        Serial.print(LMIC.frame[LMIC.dataBeg + i], HEX);
-    }
-    Serial.println();
-
-// downlink (turn relais on when received payload = 1)
-  // if (LMIC.frame[LMIC.dataBeg] == 1)
-  // {
-  //   digitalWrite(RELAIS_PIN, HIGH);
-  //   Serial.println("RELAIS ON");
-  //   relais_on = true;
-  // }
-  // else
-  // {
-  //   digitalWrite(RELAIS_PIN, LOW);
-  //   Serial.println("RELAIS OFF");
-  //   relais_on = false;
-  // }
-  }
+        Serial.println();
+      }
     sleep();
   }
 
-  if (EV_RESPONSE == message) {
-
-    //screen_print("[TTN] Response: ");
-
+  if (EV_RESPONSE == message){
     size_t len = ttn_response_len();
     uint8_t data[len];
     ttn_response(data, len);
@@ -143,9 +135,7 @@ void callback(uint8_t message) {
     char buffer[6];
     for (uint8_t i = 0; i < len; i++) {
       snprintf(buffer, sizeof(buffer), "%02X", data[i]);
-      //screen_print(buffer);
     }
-    //screen_print("\n");
   }
 }
 
@@ -154,36 +144,35 @@ uint32_t get_count() {
 }
 
 // scan I2C bus for devices like ssd1306 oled
-void scanI2Cdevice(void)
-{
+void scanI2Cdevice(void){
     byte err, addr;
     int nDevices = 0;
-    for (addr = 1; addr < 127; addr++) {
+    for (addr = 1; addr < 127; addr++){
         Wire.beginTransmission(addr);
         err = Wire.endTransmission();
-        if (err == 0) {
-            Serial.print("I2C device found at address 0x");
-            if (addr < 16)
-                Serial.print("0");
+        if (err == 0){
+          Serial.print("I2C device found at address 0x");
+          if(addr < 16)
+            Serial.print("0");
             Serial.print(addr, HEX);
             Serial.println(" !");
             nDevices++;
-
-            if (addr == SSD1306_ADDRESS) {
-                ssd1306_found = true;
-                Serial.println("ssd1306 display found");
+            if (addr == SSD1306_ADDRESS){
+              ssd1306_found = true;
+              Serial.println("ssd1306 display found");
             }
-        } else if (err == 4) {
-            Serial.print("Unknow error at address 0x");
-            if (addr < 16)
-                Serial.print("0");
+        }
+        else if(err == 4){
+          Serial.print("Unknow error at address 0x");
+          if(addr < 16)
+            Serial.print("0");
             Serial.println(addr, HEX);
         }
     }
-    if (nDevices == 0)
-        Serial.println("No I2C devices found\n");
+    if(nDevices == 0)
+      Serial.println("No I2C devices found\n");
     else
-        Serial.println("done\n");
+      Serial.println("done\n");
 }
 
 void setup() {
@@ -204,9 +193,6 @@ void setup() {
 // BOTON
   pinMode(BUTTONPIN, INPUT_PULLUP);
 
-// // SET RELAIS_PIN TO OUTPUT
-//   pinMode(RELAIS_PIN, OUTPUT);
-
 // Display
   screen_setup();
 
@@ -221,13 +207,12 @@ void setup() {
     delay(LOGO_DELAY);
 }*/
 
-// TTN setup
-   if (!ttn_setup()) {
-   // screen_print("[ERR] Radio module not found!\n");
-   delay(MESSAGE_TO_SLEEP_DELAY);
-   // screen_off();
-   sleep_forever();
-}
+  // TTN setup
+  if(!ttn_setup()){
+    delay(MESSAGE_TO_SLEEP_DELAY);
+    screen_off();
+    sleep_forever();
+  }
 
   ttn_register(callback);
   ttn_join();
@@ -244,10 +229,10 @@ void loop(){
 // Send every SEND_INTERVAL millis
   static uint32_t last = 0;
   static bool first = true;
-  if (0 == last || millis() - last > SEND_INTERVAL) {
-      last = millis();
-      first = false;
-      Serial.println("TRANSMITTING");
-      send();
+  if(0 == last || millis() - last > SEND_INTERVAL){
+    last = millis();
+    first = false;
+    Serial.println("TRANSMITTING");
+    send();
   }
 }
