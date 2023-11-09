@@ -1,8 +1,6 @@
-/*
-
+/* ***********************************************************************************************************************************************************
 Credentials file
-
-*/
+*********************************************************************************************************************************************************** */
 
 #pragma once
 
@@ -25,16 +23,16 @@ Credentials file
     // first. When copying an EUI from ttnctl output, this means to reverse
     // the bytes. For TTN issued EUIs the last bytes should be 0x00, 0x00,
     // 0x00.
-    static const u1_t PROGMEM APPEUI[8]  = { 0x33, 0x33, 0x22, 0x22, 0x11, 0x11, 0x00, 0x00 };
+    static const u1_t PROGMEM APPEUI[8]  = {  };  // INTRODUCIR EN LSB
 
     // This should also be in little endian format, see above. (least-significant-byte
     // first)
-    static const u1_t PROGMEM DEVEUI[8]  = { 0xB5, 0xFC, 0x05, 0xD0, 0x7E, 0xD5, 0xB3, 0x70 };
+    static const u1_t PROGMEM DEVEUI[8]  = {  };  // INTRODUCIR EN LSB
 
     // This key should be in big endian format (or, since it is not really a
     // number but a block of memory, endianness does not really apply). In
     // practice, a key taken from ttnctl can be copied as-is.
     // The key shown here is the semtech default key.
-    static const u1_t PROGMEM APPKEY[16] = { 0xB5, 0xCF, 0x5E, 0x61, 0xAA, 0xC4, 0xAE, 0x2A, 0x96, 0x43, 0xF7, 0xC6, 0x41, 0x87, 0x00, 0xF3 };
+    static const u1_t PROGMEM APPKEY[16] = {  };  // INTRODUCIR EN MSB
 
 #endif

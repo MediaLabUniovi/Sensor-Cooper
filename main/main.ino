@@ -1,56 +1,32 @@
-/*
-
-  Main module
-
-  Copyright (C) 2019 by Roel van Wanrooy (www.connectix.nl)
-
-  This program is free software: you can redistribute it and/or modify
-  it under the terms of the GNU General Public License as published by
-  the Free Software Foundation, either version 3 of the License, or
-  (at your option) any later version.
-
-  This program is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  GNU General Public License for more details.
-
-  You should have received a copy of the GNU General Public License
-  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-*/
-
+/* ***********************************************************************************************************************************************************
+Este archivo ha sido modificado de manera considerable para implementar el sensor ultrasónico de distancia JSN-SR04T en vez del original BME280.
+El enlace para consultar el proyecto original del usuario de GitHub "rwanrooy" es el siguiente:
+https://github.com/rwanrooy/TTGO-PAXCOUNTER-LoRa32-V2.1-TTN.git
+*********************************************************************************************************************************************************** */
 #include "configuration.h"
 #include "rom/rtc.h"
-#include <Wire.h>
-#include <NewPing.h>
 
-bool ssd1306_found = false;
+RTC_DATA_ATTR uint32_t count = 0;                           // Message counter, stored in RTC memory, survives deep sleep
 
-//
-// NewPing config
-//
-NewPing sonar = NewPing(trigPin, echoPin, MAX_DISTANCE);
+RTC_DATA_ATTR uint8_t bufferCircular[TARGET_ARRAY_LENGTH];  // Lista donde guardo los últimos 5 valores enviados a TTN. LA ALOJO EN LA MEMORIA RTC PARA QUE SOBREVIVA AL DEEP SLEEP
 
-//
-// Voltaje batería
-//
-float Vbat = (float)(analogRead(VBAT)) / 4095*2*3.3*1.1;
+static uint8_t txBuffer[3];                                 // Enter the length of the payload in bytes (this has to be more than 3 if you want to receive downlinks)
 
-// Message counter, stored in RTC memory, survives deep sleep
-RTC_DATA_ATTR uint32_t count = 0;
+static uint8_t rxBuffer[1];                                 // Downlink payload
 
-//enter the length of the payload in bytes (this has to be more than 3 if you want to receive downlinks)
-static uint8_t txBuffer[7];
-
-//downlink payload
-static uint8_t rxBuffer[1];
-
-// -----------------------------------------------------------------------------
-// Application
-// -----------------------------------------------------------------------------
-
-void send() {
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------
+// Funcion para enviar el paquete de datos LoRa
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------
+void send(){
   buildPacket(txBuffer);
+
+  //
+  // Gestión del Buffer Circular (AQUÍ PARA EVITAR ENÉSIMAS ITERACIONES) -------------------------------------------------------------------------------------
+  //
+  carga_valores(txBuffer[0]);
+  printArray();
+  print_desviacion_estandar();
+  print_dynamic_duty_cycle();
 
 #if LORAWAN_CONFIRMED_EVERY > 0
   bool confirmed = (count % LORAWAN_CONFIRMED_EVERY == 0);
@@ -59,158 +35,147 @@ void send() {
 #endif
 
   ttn_cnt(count);
-
-// Blink led while sending  
-  digitalWrite(LED_PIN, HIGH);
-  delay(50);
-  digitalWrite(LED_PIN, LOW);
-  delay(100);
-  digitalWrite(LED_PIN, HIGH);
-  delay(50);
-  digitalWrite(LED_PIN, LOW);
   
   ttn_send(txBuffer, sizeof(txBuffer), LORAWAN_PORT, confirmed);
   
-// send count plus one 
-  count++;
+  count++;                                                  // send count plus one
 }
 
-void sleep() {
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------
+// Funcion para dormir el ESP32 durante el tiempo de duty cycle
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------
+void sleep(){
 #if SLEEP_BETWEEN_MESSAGES == 1
+  Serial.println("Iniciando deep sleep...");                // Mostrar mensaje de que se ha iniciado el deep sleep
+  Serial.println();
 
-  // Wait for MESSAGE_TO_SLEEP_DELAY millis to sleep
-  delay(MESSAGE_TO_SLEEP_DELAY);
-
-  // We sleep for the interval between messages minus the current millis
-  // this way we distribute the messages evenly every SEND_INTERVAL millis
-  uint32_t sleep_for = (millis() < SEND_INTERVAL) ? SEND_INTERVAL - millis() : SEND_INTERVAL;
+  uint32_t sleep_for = (millis() < dynamic_duty_cycle()) ? dynamic_duty_cycle() - millis() : dynamic_duty_cycle(); // We sleep for the interval between messages minus the current millis, this way we distribute the messages evenly every SEND_INTERVAL millis
   sleep_millis(sleep_for);
-
 #endif
 }
 
-void callback(uint8_t message) {
-  if (EV_JOINING == message)Serial.println("Joining TTN...\n");
-  if (EV_JOINED == message)Serial.println("TTN joined!\n");
-  if (EV_JOIN_FAILED == message)Serial.println("TTN join failed\n");
-  if (EV_REJOIN_FAILED == message)Serial.println("TTN rejoin failed\n");
-  if (EV_RESET == message)Serial.println("Reset TTN connection\n");
-  if (EV_LINK_DEAD == message)Serial.println("TTN link dead\n");
-  if (EV_ACK == message)Serial.println("ACK received\n");
-  if (EV_PENDING == message)Serial.println("Message discarded\n");
-  if (EV_QUEUED == message)Serial.println("Message queued\n");
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------
+// Funcion para mostrar mensajes por monitor serial segun se interactue con TTN
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------
+void callback(uint8_t message){
+  if(EV_JOINING == message)Serial.println("Joining TTN...");
+  if(EV_JOINED == message)Serial.println("TTN joined!");
+  if(EV_JOIN_FAILED == message)Serial.println("TTN join failed");
+  if(EV_REJOIN_FAILED == message)Serial.println("TTN rejoin failed");
+  if(EV_RESET == message)Serial.println("Reset TTN connection");
+  if(EV_LINK_DEAD == message)Serial.println("TTN link dead");
+  if(EV_ACK == message)Serial.println("ACK received");
+  if(EV_PENDING == message)Serial.println("Message discarded");
+  if(EV_QUEUED == message)Serial.println("Message queued");
 
-  if (EV_TXCOMPLETE == message){
-    if (LMIC.txrxFlags & TXRX_ACK)
+  if(EV_TXCOMPLETE == message){
+    Serial.println(F("EV_TXCOMPLETE (includes waiting for RX windows)"));
+    if(LMIC.txrxFlags & TXRX_ACK){
       Serial.println(F("Received ack"));
-      if (LMIC.dataLen) {
-        Serial.print(F("Received "));
-        Serial.print(LMIC.dataLen);
-        Serial.println(F(" bytes of payload"));
-        for (int i = 0; i < LMIC.dataLen; i++){
-          if (LMIC.frame[LMIC.dataBeg + i] < 0x10){
-            Serial.print(F("0"));
-          }
-          Serial.print(F("Received payload: "));
-          Serial.print(LMIC.frame[LMIC.dataBeg + i], HEX);
+    }
+    if(LMIC.dataLen){
+      Serial.print(F("Received "));
+      Serial.print(LMIC.dataLen);
+      Serial.println(F(" bytes of payload"));
+      for (int i = 0; i < LMIC.dataLen; i++){
+        if (LMIC.frame[LMIC.dataBeg + i] < 0x10){
+          Serial.print(F("0"));
         }
-        Serial.println();
+        Serial.print(F("Received payload: "));
+        Serial.print(LMIC.frame[LMIC.dataBeg + i], HEX);
       }
+      Serial.println();
+    }
     sleep();
+  }
+
+  if(EV_RESPONSE == message){
+    Serial.print(F("[TTN] Response: "));
+
+    size_t len = ttn_response_len();
+    uint8_t data[len];
+    ttn_response(data, len);
+
+    char buffer[6];
+    for(uint8_t i = 0; i < len; i++){
+      Serial.print(F(buffer));
+    }
+    Serial.println();
   }
 }
 
-uint32_t get_count() {
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------
+// Funcion contador del deep sleep mode para saber que, tras volver de d.s., tiene valores en la memoria RTC
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------
+uint32_t get_count(){
   return count;
 }
 
-// scan I2C bus for devices like ssd1306 oled
-void scanI2Cdevice(void){
-    byte err, addr;
-    int nDevices = 0;
-    for (addr = 1; addr < 127; addr++){
-        Wire.beginTransmission(addr);
-        err = Wire.endTransmission();
-        if (err == 0){
-          Serial.print("I2C device found at address 0x");
-          if(addr < 16)
-            Serial.print("0");
-            Serial.print(addr, HEX);
-            Serial.println(" !");
-            nDevices++;
-            if (addr == SSD1306_ADDRESS){
-              ssd1306_found = true;
-              Serial.println("ssd1306 display found");
-            }
-        }
-        else if(err == 4){
-          Serial.print("Unknow error at address 0x");
-          if(addr < 16)
-            Serial.print("0");
-            Serial.println(addr, HEX);
-        }
-    }
-    if(nDevices == 0)
-      Serial.println("No I2C devices found\n");
-    else
-      Serial.println("done\n");
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------
+// Funcion de temporizacion en milisegundos personalizable. Como 'delay()', pero sin detener la ejecución del programa
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------
+void mi_timer(int intervalo){                                // Supongo un intervalo de 2000
+  unsigned long inicioTiempo = millis();                     // Obten el tiempo actual en ms, supongo 14000
+  while(millis() - inicioTiempo < intervalo){}               // Mientras 14000... 15000... 16000... - 14000 = 0... 1000... 2000... 3000 (hasta 3000 se cumple) < 2000, me meto en el bucle
 }
 
-void setup() {
-// Debug
-  #ifdef DEBUG_PORT
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------
+// Funcion para activar o desactivar desde "configuration.h" el monitor serial para debugging
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------
+void debug_code(){
+#if ENABLE_DEBUG == 1
   DEBUG_PORT.begin(SERIAL_BAUD);
-  #endif
+#endif
+}
 
-//  delay(1000);
+// ===========================================================================================================================================================
+// Setup main
+// ===========================================================================================================================================================
+void setup(){
+  //
+  // Debug ---------------------------------------------------------------------------------------------------------------------------------------------------
+  //
+  debug_code();
 
-// Scan for I2C devices
-  Wire.begin(I2C_SDA, I2C_SCL);
-  scanI2Cdevice();
+  //
+  // Init pines de perifericos que envian por LoRa -----------------------------------------------------------------------------------------------------------
+  //
+  pinMode(VBATPIN, INPUT);                                  // VBATPIN como input. Es el "sensor" de voltaje de la batería
+  pinMode(trigPin, OUTPUT);                                 // trigPin (Rx) como output. Inicia los pulsos ultrasonicos cuando se pone en 'HIGH' 
+  pinMode(echoPin, INPUT);                                  // echoPin (Tx) 
+  pinMode(VOUT_PIN, OUTPUT);                                // Pin para alimentar al sensor, siempre a 'HIGH' y que se desconecte al entrar el deep sleep
 
-// SET BUILT-IN LED TO OUTPUT
-  pinMode(LED_PIN, OUTPUT);
+  digitalWrite(VOUT_PIN, HIGH);                             // Poner a 'HIGH' siempre el pin del sensor para que haga de "Vcc"
 
-// BOTON
-  pinMode(BUTTONPIN, INPUT_PULLUP);
-
-// Display
-  screen_setup();
-
-// Init variables a enviar por LoRa
-  LoRa_setup();
-
-// Show logo on first boot
-/*  if (0 == count) {
-    screen_print(APP_NAME " " APP_VERSION, 0, 0 );
-    screen_show_logo();
-    screen_update();
-    delay(LOGO_DELAY);
-}*/
-
-  // TTN setup
+  //
+  // TTN setup -----------------------------------------------------------------------------------------------------------------------------------------------
+  //
   if(!ttn_setup()){
-    delay(MESSAGE_TO_SLEEP_DELAY);
-    //screen_off();
+    Serial.println("[ERR] Radio module not found!");
     sleep_forever();
   }
 
+  //
+  // TTN register --------------------------------------------------------------------------------------------------------------------------------------------
+  //
   ttn_register(callback);
   ttn_join();
   ttn_sf(LORAWAN_SF);
   ttn_adr(LORAWAN_ADR);
 }
 
-
-
+// ===========================================================================================================================================================
+// Loop main
+// ===========================================================================================================================================================
 void loop(){
   ttn_loop();
-  muestra_informacion_OLED(2000);
-  
-// Send every SEND_INTERVAL millis
+    
+  //
+  // Send every SEND_INTERVAL millis -------------------------------------------------------------------------------------------------------------------------
+  //
   static uint32_t last = 0;
   static bool first = true;
-  if(0 == last || millis() - last > SEND_INTERVAL){
+  if(0 == last || millis() - last > dynamic_duty_cycle()){
     last = millis();
     first = false;
     Serial.println("TRANSMITTING");
