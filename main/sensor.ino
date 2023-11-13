@@ -47,7 +47,14 @@ uint8_t obten_nivel_mediano(uint8_t muestras){
         index++;                                            
         mi_timer(250);                                      // Por ello, en este 'if', itero cada 250ms hasta que de una medida que no sea 0
       }
-      Serial.print("Umbral superior corregido: ");
+
+      if(index == 10){
+        Serial.println("UMBRAL SUPERIOR");
+        distancia_sonar = MAX_DISTANCE;
+      }
+      else{
+        Serial.print("Umbral superior corregido, ");
+      }
     }
 
     else if(distancia_sonar <= 24 && distancia_sonar >= 1){ // Si estoy entre 1 y 24, el sensor no tiene resolución y siempre da "24"
@@ -67,7 +74,7 @@ uint8_t obten_nivel_mediano(uint8_t muestras){
         distancia_sonar = MIN_DISTANCE;
       }
       else{
-        Serial.print("Umbral inferior corregido: ");        // Si no, es que consiguió una medida "sana" y es con la que me quedo en el array
+        Serial.print("Umbral inferior corregido, ");        // Si no, es que consiguió una medida "sana" y es con la que me quedo en el array
       }
     }
 

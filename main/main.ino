@@ -1,4 +1,6 @@
 /* ***********************************************************************************************************************************************************
+SENSOR COOPER V3.2 - MEDIALAB LPWAN UNIVERSIDAD DE OVIEDO
+
 Este archivo ha sido modificado de manera considerable para implementar el sensor ultrasónico de distancia JSN-SR04T en vez del original BME280.
 El enlace para consultar el proyecto original del usuario de GitHub "rwanrooy" es el siguiente:
 https://github.com/rwanrooy/TTGO-PAXCOUNTER-LoRa32-V2.1-TTN.git
