@@ -11,6 +11,8 @@ Component list:
 | Battery  | 18650  |
 | Solar panel  | SYP-S0606  |
 | PCB  | Custom (file included)  |
+| Housing  | Custom (file included)  |
+
 
 - Developed with LilyGO LoRa32 OLED v2.1_1.6
 ![alt text](https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/Screenshot%202023-11-13%20194151.png)
