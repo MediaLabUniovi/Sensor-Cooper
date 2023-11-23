@@ -8,7 +8,7 @@ Project based on: https://github.com/rwanrooy/TTGO-PAXCOUNTER-LoRa32-V2.1-TTN.
 - Changes made for JSN-SR04T: ultrasonic distance sensor
 ![alt text](https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/61rPJNXbuNL._AC_UF894%2C1000_QL80_.jpg)
 
-- Dynamic Duty Cycle implementation: send interval dynamically changes its value depending on the typical deviation from the latest 5 distances sent to TTN
+- Dynamic Data Transmission Rate implementation: send interval dynamically changes its value depending on the typical deviation from the latest 5 distances sent to TTN
 ![alt text](https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/Screenshot%202023-11-06%20131622.png)
 
 The first unit has been deployed near the Polytechnic School of Engineering of Gijón:
