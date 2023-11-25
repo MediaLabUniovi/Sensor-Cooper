@@ -15,7 +15,7 @@ Component list:
 
 Main features:
 
-- Developed with LilyGO LoRa32 OLED v2.1_1.6 (supports solar recharging and battery management)
+- Developed using LilyGO LoRa32 OLED v2.1_1.6 (supports solar recharging and battery management)
 ![alt text](https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/Screenshot%202023-11-13%20194151.png)
 
 - Changes made for JSN-SR04T: ultrasonic distance sensor
