@@ -31,4 +31,4 @@ Access the Grafana panel via this link:
 
 http://4f566df1fed52c6e7fd5f661f64ae3eb.balena-devices.com:8080/d/vJhQNCZgz/sensores-jsn-sr04t-arroyo-de-san-miguel?from=now-24h&orgId=1&refresh=1m&to=now
 
-Authors: Daniel Rodríguez Moya, Óscar Gijón and MediaLab LPWAN Workgroup.
+Authors: Daniel Rodríguez Moya, Óscar Gijón, Ramón Rubio and MediaLab LPWAN Workgroup.
