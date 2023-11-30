@@ -44,7 +44,7 @@ _The PCB offers the possibility to connect a button between GPIO23 and GND to be
 - Changes made for JSN-SR04T: ultrasonic distance sensor
 ![alt text](https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/61rPJNXbuNL._AC_UF894%2C1000_QL80_.jpg)
 
-- Dynamic Data Transmission Rate implementation: send interval dynamically changes its value depending on the typical deviation from the latest 5 distances sent to TTN
+- Dynamic Data Transmission Rate implementation: send interval dynamically changes its value depending on the typical deviation from the latest 5 distances sent to The Things Network (by OTAA)
 ![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-11-30%20182339.png)
 
 The first unit has been deployed near the Polytechnic School of Engineering of Gijón:
