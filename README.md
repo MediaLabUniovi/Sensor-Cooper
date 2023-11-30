@@ -14,14 +14,27 @@ With these sensors, the aim is to monitor the possibility of the main building f
 
 **Component list:**
 
-| Component  | Model |
+| Component | Model |
 | ------------- | ------------- |
-| Dev Module  | LilyGO LoRa32 OLED v2.1_1.6  |
-| Distance sensor  | JSN-SR04T  |
-| Battery  | 18650  |
-| Solar panel  | SYP-S0606  |
-| PCB  | Custom (file included)  |
-| Housing  | Custom (file included)  |
+| Dev Module  | LilyGO LoRa32 OLED v2.1_1.6 |
+| Distance sensor  | JSN-SR04T |
+| Battery  | 18650 |
+| Solar panel  | SYP-S0606 |
+| PCB  | Custom (file included) |
+| Housing  | Custom (file included) |
+
+**Connection list:**
+
+| JSN-SR04T | 18650 | SYP-S0606 | LilyGO |
+| ------------- | ------------- | ------------- | ------------- |
+| trigger | - | - | 13 |
+| echo | - | - | 12 |
+| 5v | - | - | 00 |
+| GND | - | - | GND |
+| - | Bat Conn | - | Bat Conn |
+| - | - | USB | USB |
+
+_The PCB offers the possibility to connect a button between GPIO23 and GND to be programmed as desired_
 
 **Main features:**
 
