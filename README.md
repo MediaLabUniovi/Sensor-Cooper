@@ -6,6 +6,12 @@ In honour of Martin Cooper and Arlene Harris and their vision of IoP, The Intern
 
 ![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/4_Martin%20Cooper%20y%20Arlene%20Harris.jpg)
 
+With these sensors, the aim is to monitor the possibility of the main building flood during the heavy rains season. Specifically, in 2018, a major flood took place turning useless many expensive equipment from the lower floors that were used by the students during the laboratory practices of many subjetcs:
+
+![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/escuela-politecnica-ingenieria%20(4).jpg)
+![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/escuela-politecnica-ingenieria%20(12).jpg)
+![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/escuela-politecnica-ingenieria%20(6).jpg)
+
 Component list:
 
 | Component  | Model |
