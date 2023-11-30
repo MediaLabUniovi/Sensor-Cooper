@@ -70,6 +70,10 @@ The first unit has been deployed near the Polytechnic School of Engineering of G
   "features": [
     {
       "type": "Feature",
+      "id": 1,
+      "properties": {
+        "ID": 0
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [43.524908, -5.633027]
