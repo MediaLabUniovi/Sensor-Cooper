@@ -34,7 +34,8 @@ With these sensors, the aim is to monitor the possibility of a flood in the main
 | - | Bat Conn | - | Bat Conn |
 | - | - | USB | USB |
 
-_The PCB offers the possibility to connect a button between GPIO23 and GND to be programmed as desired_
+> [!TIP]
+> The PCB offers the possibility to connect a button between GPIO23 and GND to be programmed as desired
 
 **Libraries:**
 
@@ -46,7 +47,8 @@ _The PCB offers the possibility to connect a button between GPIO23 and GND to be
 
 - ESP sleep (To reduce battery consumption): https://github.com/pycom/pycom-esp-idf/blob/master/components/esp32/include/esp_sleep.h
 
-_Other libraries, like SPI library, are easily downloadable from Arduino IDE_
+> [!NOTE]
+> Other libraries, like SPI library, are easily downloadable from Arduino IDE
 
 **Main features:**
 
