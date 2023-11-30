@@ -72,7 +72,7 @@ The first unit has been deployed near the Polytechnic School of Engineering of G
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-5.635430, 43.523768]
+        "coordinates": [43.524908, -5.633027]
       },
       "properties": {
         "name": "Location Marker"
