@@ -50,7 +50,7 @@ _The PCB offers the possibility to connect a button between GPIO23 and GND to be
 The first unit has been deployed near the Polytechnic School of Engineering of Gijón:
 ![alt text](https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/9_Sensor%20Cooper%20en%20Arroyo%20de%20San%20Miguel.jpg)
 
-Access the Grafana panel via this QR code:
+Access the Grafana panel via this QR code or the link below it:
 
 ![alt text](https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/qrcode_4f566df1fed52c6e7fd5f661f64ae3eb.balena-devices.com.png)
 
