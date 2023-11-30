@@ -12,7 +12,7 @@ With these sensors, the aim is to monitor the possibility of the main building f
 ![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/escuela-politecnica-ingenieria%20(12).jpg)
 ![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/escuela-politecnica-ingenieria%20(6).jpg)
 
-Component list:
+**Component list:**
 
 | Component  | Model |
 | ------------- | ------------- |
@@ -23,7 +23,7 @@ Component list:
 | PCB  | Custom (file included)  |
 | Housing  | Custom (file included)  |
 
-Main features:
+**Main features:**
 
 - Developed using LilyGO LoRa32 OLED v2.1_1.6 (supports solar recharging and battery management)
 ![alt text](https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/Screenshot%202023-11-13%20194151.png)
