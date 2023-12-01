@@ -109,7 +109,7 @@ ___
 The first unit has been deployed near the Polytechnic School of Engineering of Gijón:
 
 ![alt text](https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/9_Sensor%20Cooper%20en%20Arroyo%20de%20San%20Miguel.jpg)
-![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-12-01%20192541.png)
+![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/map.png)
 
 ___
 
