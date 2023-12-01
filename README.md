@@ -41,7 +41,7 @@ ___
 | - | - | `USB` | `USB` |
 
 > [!TIP]
-> The PCB (more info coming below) offers the possibility to connect a button between GPIO23 and GND to be programmed as desired
+> The PCB (More info coming below) offers the possibility to connect a button between GPIO23 and GND to be programmed as desired
 
 ___
 
@@ -82,11 +82,11 @@ ___
 
 ### Main features:
 
-- Developed using LilyGO LoRa32 OLED v2.1_1.6 (supports solar recharging and battery management)
+- Developed using LilyGO LoRa32 OLED v2.1_1.6 (Supports solar recharging and battery management)
 
   ![alt text](https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/Screenshot%202023-11-13%20194151.png)
 
-- Changes made for JSN-SR04T (ultrasonic distance sensor)
+- Changes made for JSN-SR04T (Ultrasonic distance sensor)
 
   ![alt text](https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/61rPJNXbuNL._AC_UF894%2C1000_QL80_.jpg)
 
@@ -129,4 +129,4 @@ http://4f566df1fed52c6e7fd5f661f64ae3eb.balena-devices.com:8080/d/vJhQNCZgz/sens
 
 _Authors: Daniel Rodríguez Moya, Óscar Gijón, Ramón Rubio and MediaLab LPWAN Workgroup_
 
-[^1]: Instructions to deploy Grafana panels are given in the repo `medialablpwan/documentation`
+[^1]: Instructions on how to deploy Grafana panels are given on the repo `medialablpwan/documentacion`.
