@@ -37,6 +37,17 @@ With these sensors, the aim is to monitor the possibility of a flood in the main
 > [!TIP]
 > The PCB offers the possibility to connect a button between GPIO23 and GND to be programmed as desired
 
+### Flowchart
+```mermaid
+graph TD;
+  A[Turn on] -->|1| B(Wake up if in deep sleep)
+  B -->|2| C(Get distance and battery measurement)
+  C -->|3| D(Send bytes to TTN)
+  D -->|4| E(Time 20 minutes)
+  E -->|5| F(Go to deep sleep)
+  F -->|6| B
+```
+
 ### Libraries:
 
 - LilyGO board library (Paste the link on the preferences tab and choose board as "TTGO LoRa32 OLED" in Arduino IDE): https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/boards/t3_s3_v1_x.json
@@ -107,6 +118,6 @@ Access the Grafana panel via this QR code or the link below it:
 
 http://4f566df1fed52c6e7fd5f661f64ae3eb.balena-devices.com:8080/d/vJhQNCZgz/sensores-jsn-sr04t-arroyo-de-san-miguel?from=now-24h&orgId=1&to=now&refresh=1m
 
-We will kindly answer doubts and read suggestions via e-mail: medialablpwan@gmail.com :shipit:
+### We will kindly answer doubts and read suggestions via e-mail: medialablpwan@gmail.com :shipit:
 
-Authors: Daniel Rodríguez Moya, Óscar Gijón, Ramón Rubio and MediaLab LPWAN Workgroup.
+__Authors: Daniel Rodríguez Moya, Óscar Gijón, Ramón Rubio and MediaLab LPWAN Workgroup__
