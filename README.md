@@ -55,6 +55,12 @@ graph TD;
   F -->|6| B
 ```
 
+> [!TIP]
+> Inside of folder `lorawaterlevelmonitorin/main`, the code is available and ready to flash or edit. The most important files to edit are `sensor.ino`, where any sensor can be implemented, and `configuration.h`, where the peripherals' macros are declared
+
+> [!CAUTION]
+> Additional code may be needed if implementing I2C I/O. The functions to make them work are in the original project in `TTGO-PAXCOUNTER-LoRa32-V2.1-TTN/main/main.ino`
+
 ___
 
 ### Libraries:
