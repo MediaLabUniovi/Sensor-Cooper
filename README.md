@@ -63,7 +63,7 @@ With these sensors, the aim is to monitor the possibility of a flood in the main
 
 - Custom housing to fit all the elements in the most efficient way
 ```stl
-solid OBJECT1
+solid TAPA
   facet normal -0.26814792771818879 0.82266420051414946 0.50131856344330217
     outer loop
       vertex 23.445640563964844 -15.554069519042969 71.750289916992188
@@ -14484,11 +14484,11 @@ solid OBJECT1
       vertex -39 28.061588287353516 -1
     endloop
   endfacet
-endsolid OBJECT1
+endsolid TAPA
 ```
 
 ```stl
-solid OBJECT
+solid CUERPO
   facet normal -5.0932004867598691e-06 -0.81916836050232222 -0.57355313365545901
     outer loop
       vertex 83.152191162109375 97.966064453125 -20.862123489379883
@@ -41887,7 +41887,7 @@ solid OBJECT
       vertex 98.173721313476562 88.239852905273438 -8.7151041030883789
     endloop
   endfacet
-endsolid OBJECT
+endsolid CUERPO
 ```
 
 The first unit has been deployed near the Polytechnic School of Engineering of Gijón:
