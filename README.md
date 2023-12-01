@@ -58,12 +58,15 @@ With these sensors, the aim is to monitor the possibility of a flood in the main
 - Changes made for JSN-SR04T: ultrasonic distance sensor
 ![alt text](https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/61rPJNXbuNL._AC_UF894%2C1000_QL80_.jpg)
 
+- Custom PCB
+![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-10-04%20142016.png)
+
 - Dynamic Data Transmission Rate implementation: send interval dynamically changes its value depending on the typical deviation from the latest 5 distances sent to The Things Network (By OTAA; file "payload_formatter.json" is a suggestion on how to decode the sent bytes)
 ![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-11-30%20182339.png)
 
 - Custom housing to fit all the elements in the most efficient way
-
-
+![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-12-01%20175741.png)
+![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-12-01%20175633.png)
 
 The first unit has been deployed near the Polytechnic School of Engineering of Gijón:
 ![alt text](https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/9_Sensor%20Cooper%20en%20Arroyo%20de%20San%20Miguel.jpg)
@@ -83,7 +86,7 @@ The first unit has been deployed near the Polytechnic School of Engineering of G
         "coordinates": [-5.634150, 43.525664]
       },
       "properties": {
-        "name": "Location Marker"
+        "name": "Escuela Politécnica de Ingeniería de Gijón"
       }
     }
   ]
