@@ -83,7 +83,7 @@ The first unit has been deployed near the Polytechnic School of Engineering of G
         "coordinates": [-5.634150, 43.525664]
       },
       "properties": {
-        "name": "Escuela Politécnica de Ingeniería de Gijón"
+        "name": "Location Marker"
       }
     }
   ]
