@@ -41,7 +41,7 @@ ___
 | - | - | `USB` | `USB` |
 
 > [!TIP]
-> The PCB offers the possibility to connect a button between GPIO23 and GND to be programmed as desired
+> The PCB (more info coming below) offers the possibility to connect a button between GPIO23 and GND to be programmed as desired
 
 ___
 
@@ -118,7 +118,7 @@ The first unit has been deployed near the Polytechnic School of Engineering of G
 
 ___
 
-Access the Grafana panel via this QR code or the link below it:
+Access the Grafana panel[^1] via this QR code or the link below it:
 
 ![alt text](https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/qrcode_4f566df1fed52c6e7fd5f661f64ae3eb.balena-devices.com.png)
 
@@ -128,3 +128,5 @@ http://4f566df1fed52c6e7fd5f661f64ae3eb.balena-devices.com:8080/d/vJhQNCZgz/sens
 > We will kindly answer doubts and read suggestions via e-mail: medialablpwan@gmail.com :shipit:
 
 _Authors: Daniel Rodríguez Moya, Óscar Gijón, Ramón Rubio and MediaLab LPWAN Workgroup_
+
+[^1]: Instructions to deploy Grafana panels are given in the repo `medialablpwan/documentation`
