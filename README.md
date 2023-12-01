@@ -12,6 +12,8 @@ With these sensors, the aim is to monitor the possibility of a flood in the main
 ![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/escuela-politecnica-ingenieria%20(12).jpg)
 ![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/escuela-politecnica-ingenieria%20(6).jpg)
 
+In this repo, you will find all the files and teaching guides required to understand and even take the creative freedom to improve this project.
+
 ___
 
 ### Component list:
