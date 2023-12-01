@@ -121,4 +121,4 @@ http://4f566df1fed52c6e7fd5f661f64ae3eb.balena-devices.com:8080/d/vJhQNCZgz/sens
 > [!IMPORTANT]
 > We will kindly answer doubts and read suggestions via e-mail: medialablpwan@gmail.com :shipit:
 
-__Authors: Daniel Rodríguez Moya, Óscar Gijón, Ramón Rubio and MediaLab LPWAN Workgroup__
+_Authors: Daniel Rodríguez Moya, Óscar Gijón, Ramón Rubio and MediaLab LPWAN Workgroup_
