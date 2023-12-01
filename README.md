@@ -12,6 +12,8 @@ With these sensors, the aim is to monitor the possibility of a flood in the main
 ![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/escuela-politecnica-ingenieria%20(12).jpg)
 ![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/escuela-politecnica-ingenieria%20(6).jpg)
 
+___
+
 ### Component list:
 
 | Component | Model |
@@ -23,21 +25,26 @@ With these sensors, the aim is to monitor the possibility of a flood in the main
 | PCB  | Custom (file included) |
 | Housing  | Custom (file included) |
 
+___
+
 ### Connection list:
 
 | JSN-SR04T | 18650 | SYP-S0606 | LilyGO |
 | ------------- | ------------- | ------------- | ------------- |
-| trigger | - | - | 13 |
-| echo | - | - | 12 |
-| 5v | - | - | 00 |
-| GND | - | - | GND |
-| - | Bat Conn | - | Bat Conn |
-| - | - | USB | USB |
+| `trigger` | - | - | `13` |
+| `echo` | - | - | `12` |
+| `5v` | - | - | `00` |
+| `GND` | - | - | `GND` |
+| - | `Bat Conn` | - | `Bat Conn` |
+| - | - | `USB` | `USB` |
 
 > [!TIP]
 > The PCB offers the possibility to connect a button between GPIO23 and GND to be programmed as desired
 
+___
+
 ### Flowchart
+
 ```mermaid
 graph TD;
   A[Turn on] -->|1| B(Wake up if in deep sleep)
@@ -47,6 +54,8 @@ graph TD;
   E -->|5| F(Go to deep sleep)
   F -->|6| B
 ```
+
+___
 
 ### Libraries:
 
@@ -60,6 +69,8 @@ graph TD;
 
 > [!NOTE]
 > Other libraries, like SPI library, are easily downloadable from Arduino IDE
+
+___
 
 ### Main features:
 
@@ -87,7 +98,10 @@ graph TD;
 > [!WARNING]
 > Clear colour PETG 3D printing filament is recommended to survive sun radiation and plastic deformations
 
+___
+
 The first unit has been deployed near the Polytechnic School of Engineering of Gijón:
+
 ![alt text](https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/9_Sensor%20Cooper%20en%20Arroyo%20de%20San%20Miguel.jpg)
 
 ```geojson
@@ -111,6 +125,8 @@ The first unit has been deployed near the Polytechnic School of Engineering of G
   ]
 }
 ```
+
+___
 
 Access the Grafana panel via this QR code or the link below it:
 
