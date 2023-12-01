@@ -12,7 +12,7 @@ With these sensors, the aim is to monitor the possibility of a flood in the main
 ![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/escuela-politecnica-ingenieria%20(12).jpg)
 ![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/escuela-politecnica-ingenieria%20(6).jpg)
 
-**Component list:**
+### Component list:
 
 | Component | Model |
 | ------------- | ------------- |
@@ -23,7 +23,7 @@ With these sensors, the aim is to monitor the possibility of a flood in the main
 | PCB  | Custom (file included) |
 | Housing  | Custom (file included) |
 
-**Connection list:**
+### Connection list:
 
 | JSN-SR04T | 18650 | SYP-S0606 | LilyGO |
 | ------------- | ------------- | ------------- | ------------- |
@@ -37,7 +37,7 @@ With these sensors, the aim is to monitor the possibility of a flood in the main
 > [!TIP]
 > The PCB offers the possibility to connect a button between GPIO23 and GND to be programmed as desired
 
-**Libraries:**
+### Libraries:
 
 - LilyGO board library (Paste the link on the preferences tab and choose board as "TTGO LoRa32 OLED" in Arduino IDE): https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/boards/t3_s3_v1_x.json
 
@@ -50,23 +50,23 @@ With these sensors, the aim is to monitor the possibility of a flood in the main
 > [!NOTE]
 > Other libraries, like SPI library, are easily downloadable from Arduino IDE
 
-**Main features:**
+### Main features:
 
 - Developed using LilyGO LoRa32 OLED v2.1_1.6 (supports solar recharging and battery management)
-![alt text](https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/Screenshot%202023-11-13%20194151.png)
+  ![alt text](https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/Screenshot%202023-11-13%20194151.png)
 
 - Changes made for JSN-SR04T: ultrasonic distance sensor
-![alt text](https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/61rPJNXbuNL._AC_UF894%2C1000_QL80_.jpg)
+  ![alt text](https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/61rPJNXbuNL._AC_UF894%2C1000_QL80_.jpg)
 
 - Custom PCB
-![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-10-04%20142016.png)
+  ![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-10-04%20142016.png)
 
 - Dynamic Data Transmission Rate implementation: send interval dynamically changes its value depending on the typical deviation from the latest 5 distances sent to The Things Network (By OTAA; file "payload_formatter.json" is a suggestion on how to decode the sent bytes)
-![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-11-30%20182339.png)
+  ![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-11-30%20182339.png)
 
 - Custom housing to fit all the elements in the most efficient way
-![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-12-01%20175741.png)
-![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-12-01%20175633.png)
+  ![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-12-01%20175741.png)
+  ![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-12-01%20175633.png)
 
 The first unit has been deployed near the Polytechnic School of Engineering of Gijón:
 ![alt text](https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/9_Sensor%20Cooper%20en%20Arroyo%20de%20San%20Miguel.jpg)
