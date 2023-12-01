@@ -67,9 +67,9 @@ ___
 
 ### Libraries:
 
-- LilyGO board library (Paste the link on the preferences tab and choose board as "TTGO LoRa32 OLED" in Arduino IDE): https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/boards/t3_s3_v1_x.json
+- LilyGO board library (Paste the link on the ´Preferences´ tab and choose ´Board´ as ´TTGO LoRa32 OLED´ in Arduino IDE): https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/boards/t3_s3_v1_x.json
 
-- LMIC (Copy the contents of the project file main/lmic_project_config.h to the library file arduino-lmic/project_config/lmic_project_config.h and uncomment the proper frequency for your region. The sketch does always look at the library folder for the configured region): https://github.com/mcci-catena/arduino-lmic
+- LMIC (Copy the contents of the project file ´main/lmic_project_config.h´ to the library file ´arduino-lmic/project_config/lmic_project_config.h´ and uncomment the proper frequency for your region. The sketch does always look at the library folder for the configured region!): https://github.com/mcci-catena/arduino-lmic
 
 - QuickMedianLib (To obtain more solid distance values): https://github.com/luisllamasbinaburo/Arduino-QuickMedian
 
