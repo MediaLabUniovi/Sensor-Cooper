@@ -84,7 +84,7 @@ ___
 
   ![alt text](https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/Screenshot%202023-11-13%20194151.png)
 
-- Changes made for JSN-SR04T: ultrasonic distance sensor
+- Changes made for JSN-SR04T (ultrasonic distance sensor)
 
   ![alt text](https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/61rPJNXbuNL._AC_UF894%2C1000_QL80_.jpg)
 
@@ -96,13 +96,16 @@ ___
 
   ![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-10-04%20142016.png)
 
+> [!TIP]
+> Consider soldering female pin connectors so the electronic components can simply be plugged in and unplugged if a repair has to be done
+
 - Custom housing to fit all the elements in the most efficient way
 
   ![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-12-01%20175741.png)
   ![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-12-01%20175633.png)
 
 > [!WARNING]
-> Clear colour PETG 3D printing filament is recommended to survive sun radiation and plastic deformations
+> Clear colour PETG 3D printing filament is recommended to survive sun radiation and plastic deformations. An O-ring is also a good choice to fix and stabilize the sensor inside of the bell
 
 ___
 
