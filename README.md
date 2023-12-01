@@ -104,27 +104,7 @@ The first unit has been deployed near the Polytechnic School of Engineering of G
 
 ![alt text](https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/9_Sensor%20Cooper%20en%20Arroyo%20de%20San%20Miguel.jpg)
 
-```geojson
-{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "id": 1,
-      "properties": {
-        "ID": 0
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-5.634150, 43.525664]
-      },
-      "properties": {
-        "name": "Location Marker"
-      }
-    }
-  ]
-}
-```
+![alt text](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-12-01%20192541.png)
 
 ___
 
