@@ -2,7 +2,7 @@
 
 ## <p align="justify"> Project based on: https://github.com/rwanrooy/TTGO-PAXCOUNTER-LoRa32-V2.1-TTN </p>
 
-<p align="justify"> In honour of Martin Cooper, Princesa de Asturias Award 2009, and Arlene Harris and their vision of IoP, The Internet of People, in MediaLab_ LPWAN, we wanted to develop an IoT device that could improve the quality of the Polytechnic School of Engineering of Gijón. As a result, the idea of the Cooper Sensor came in as a LoRa device that could be left without any need of mantainance measuring the water level of San Miguel's creek. </p>
+<p align="justify"> In honour of Martin Cooper, Princesa de Asturias Award 2009, and Arlene Harris and their vision of IoP, The Internet of People, in MediaLab_ LPWAN we wanted to develop an IoT device that could improve the quality of the Polytechnic School of Engineering of Gijón. As a result, the idea of the Cooper Sensor came in as a LoRa device that could be left measuring the water level of San Miguel's creek without any need of mantainance. </p>
 
 <div align="center">
   <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/4_Martin%20Cooper%20y%20Arlene%20Harris.jpg" width="600"  style="margin: 10px;"/>
@@ -45,6 +45,58 @@ ___
 
 ___
 
+### <p align="justify"> Main features: </p>
+
+- <p align="justify"> Developed using LilyGO LoRa32 OLED v2.1_1.6 (ESP32 based board with built-in LoRa capabilities that supports solar recharging and battery management) </p>
+
+  <div align="center">
+    <img src="https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/Screenshot%202023-11-13%20194151.png" width="600"  style="margin: 10px;"/>
+  </div>
+  <br/>
+
+- <p align="justify"> Changes made for JSN-SR04T (Ultrasonic distance sensor) </p>
+
+  <div align="center">
+    <img src="https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/61rPJNXbuNL._AC_UF894%2C1000_QL80_.jpg" width="600"  style="margin: 10px;"/>
+  </div>
+  <br/>
+
+> [!WARNING]
+> This sensor is extremely sensitive to physical disturbances. Be sure to perfectly align it perpendicularly to the surface where the ultrasonic beam bounces and also mind having direct vision to it
+
+- <p align="justify"> Dynamic Data Transmission Rate implementation: send interval dynamically changes its value between 20 and 40 minutes depending on the typical deviation from the latest 5 distances sent to The Things Network (By OTAA; file [payload_formatter.json] is a suggestion on how to decode the sent bytes) </p>
+
+  <div align="center">
+    <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-11-30%20182339.png" width="600"  style="margin: 10px;"/>
+  </div>
+  <br/>
+
+- <p align="justify"> Custom PCB </p>
+
+  <div align="center">
+    <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-10-04%20142016.png" width="600"  style="margin: 10px;"/>
+  </div>
+  <br/>
+
+> [!TIP]
+> Consider soldering female pin connectors so the electronic components can simply be plugged in and unplugged if a repair has to be done
+
+- <p align="justify"> Custom housing to fit all the elements in the most efficient way (Container + Solar panel holder + USB protector) </p>
+
+  <div align="center">
+    <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-12-01%20175741.png" width="600"  style="margin: 10px;"/>
+  </div>
+  <br/>
+  <div align="center">
+    <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-12-01%20175633.png" width="600"  style="margin: 10px;"/>
+  </div>
+  <br/>
+
+> [!WARNING]
+> Clear colour PETG 3D printing filament is recommended to survive sun radiation and plastic deformations. An O-ring is also a good choice to fix and stabilize the sensor inside of the bell. Four M3 screws are needed to fix the assembly
+
+___
+
 ### <p align="justify"> Connection list: </p>
 
 <div align="center">
@@ -61,7 +113,7 @@ ___
 </div>
 
 > [!TIP]
-> The PCB (More info coming below) offers the possibility to connect a button between GPIO23 and GND to be programmed as desired
+> The PCB offers the possibility to connect a button between GPIO23 and GND to be programmed as desired
 
 ___
 
@@ -100,56 +152,7 @@ ___
 
 ___
 
-### <p align="justify"> Main features: </p>
-
-- <p align="justify"> Developed using LilyGO LoRa32 OLED v2.1_1.6 (Supports solar recharging and battery management) </p>
-
-  <div align="center">
-    <img src="https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/Screenshot%202023-11-13%20194151.png" width="600"  style="margin: 10px;"/>
-  </div>
-  <br/>
-
-- <p align="justify"> Changes made for JSN-SR04T (Ultrasonic distance sensor) </p>
-
-  <div align="center">
-    <img src="https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/61rPJNXbuNL._AC_UF894%2C1000_QL80_.jpg" width="600"  style="margin: 10px;"/>
-  </div>
-  <br/>
-
-- <p align="justify"> Dynamic Data Transmission Rate implementation: send interval dynamically changes its value between 20 and 40 minutes depending on the typical deviation from the latest 5 distances sent to The Things Network (By OTAA; file [payload_formatter.json] is a suggestion on how to decode the sent bytes) </p>
-
-  <div align="center">
-    <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-11-30%20182339.png" width="600"  style="margin: 10px;"/>
-  </div>
-  <br/>
-
-- <p align="justify"> Custom PCB </p>
-
-  <div align="center">
-    <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-10-04%20142016.png" width="600"  style="margin: 10px;"/>
-  </div>
-  <br/>
-
-> [!TIP]
-> Consider soldering female pin connectors so the electronic components can simply be plugged in and unplugged if a repair has to be done
-
-- <p align="justify"> Custom housing to fit all the elements in the most efficient way </p>
-
-  <div align="center">
-    <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-12-01%20175741.png" width="600"  style="margin: 10px;"/>
-  </div>
-  <br/>
-  <div align="center">
-    <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-12-01%20175633.png" width="600"  style="margin: 10px;"/>
-  </div>
-  <br/>
-
-> [!WARNING]
-> Clear colour PETG 3D printing filament is recommended to survive sun radiation and plastic deformations. An O-ring is also a good choice to fix and stabilize the sensor inside of the bell. Four M3 screws are needed to fix the assembly
-
-___
-
-<p align="justify"> The first unit has been deployed near the Polytechnic School of Engineering of Gijón: </p>
+### <p align="justify"> The first unit has been deployed near the Polytechnic School of Engineering of Gijón: </p>
 
 <div align="center">
   <img src="https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/9_Sensor%20Cooper%20en%20Arroyo%20de%20San%20Miguel.jpg" width="600"  style="margin: 10px;"/>
@@ -162,7 +165,7 @@ ___
 
 ___
 
-Access the Grafana panel[^1] via this QR code or the link below it:
+### Access the Grafana panel[^1] via this QR code or the link below it:
 
 <div align="center">
   <img src="https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/qrcode_4f566df1fed52c6e7fd5f661f64ae3eb.balena-devices.com.png" width="600"  style="margin: 10px;"/>
