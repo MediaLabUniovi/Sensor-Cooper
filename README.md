@@ -1,4 +1,4 @@
-# <p align="justify"> SENSOR COOPER V3.2 - MEDIALAB LPWAN: ULTRASONIC SENSOR FOR MEASURING SAN MIGUEL'S CREEK WATER LEVEL </p>
+# <p align="justify"> SENSOR COOPER V3.2 - MEDIALAB_ LPWAN: ULTRASONIC SENSOR FOR MEASURING SAN MIGUEL'S CREEK WATER LEVEL </p>
 
 ## <p align="justify"> Project based on: https://github.com/rwanrooy/TTGO-PAXCOUNTER-LoRa32-V2.1-TTN </p>
 
