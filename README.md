@@ -169,7 +169,7 @@ Access the Grafana panel[^1] via this QR code or the link below it:
 </div>
 <br/>
 
-<p align="justify"> http://4f566df1fed52c6e7fd5f661f64ae3eb.balena-devices.com:8080/d/vJhQNCZgz/sensores-jsn-sr04t-arroyo-de-san-miguel?from=now-24h&orgId=1&to=now&refresh=1m </p>
+<p align="center"> http://4f566df1fed52c6e7fd5f661f64ae3eb.balena-devices.com:8080/d/vJhQNCZgz/sensores-jsn-sr04t-arroyo-de-san-miguel?from=now-24h&orgId=1&to=now&refresh=1m </p>
 
 > [!IMPORTANT]
 > We will kindly answer doubts and read suggestions via e-mail: medialablpwan@gmail.com :shipit:
