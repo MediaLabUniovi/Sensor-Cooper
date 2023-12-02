@@ -1,12 +1,14 @@
-<div align="center">
-  
-_Powered by_ [![made-for-ArduinoIDE](https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)](https://www.arduino.cc/) [![programmed-for-LilyGOLoRa32](https://img.shields.io/badge/espressif-E7352C?style=for-the-badge&logo=espressif&logoColor=white)](https://www.lilygo.cc/)
-
-</div>
-
 # <p align="justify"> SENSOR COOPER V3.2 - MEDIALAB_ LPWAN: ULTRASONIC SENSOR TO MEASURE SAN MIGUEL'S CREEK WATER LEVEL </p>
 
-## <p align="justify"> Project based on: [rwanrooy/TTGO-PAXCOUNTER-LoRa32-V2.1-TTN](https://github.com/rwanrooy/TTGO-PAXCOUNTER-LoRa32-V2.1-TTN) </p>
+<div align="center">
+
+_Powered by_
+
+[![made-for-ArduinoIDE](https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)](https://www.arduino.cc/) [![programmed-for-LilyGOLoRa32](https://img.shields.io/badge/espressif-E7352C?style=for-the-badge&logo=espressif&logoColor=white)](https://www.lilygo.cc/)
+
+## Project based on: [rwanrooy/TTGO-PAXCOUNTER-LoRa32-V2.1-TTN](https://github.com/rwanrooy/TTGO-PAXCOUNTER-LoRa32-V2.1-TTN)
+
+</div>
 
 <p align="justify"> In honour of Martin Cooper, Princesa de Asturias Award 2009, and Arlene Harris and their vision of IoP, The Internet of People, in MediaLab_ LPWAN we wanted to develop an IoT device that could improve the quality of the Polytechnic School of Engineering of Gijón. As a result, the idea of the Cooper Sensor came in as a LoRa device that could be left measuring the water level of San Miguel's creek without any need of mantainance. </p>
 
