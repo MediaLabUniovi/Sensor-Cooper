@@ -6,7 +6,7 @@
 
 # <p align="justify"> SENSOR COOPER V3.2 - MEDIALAB_ LPWAN: ULTRASONIC SENSOR TO MEASURE SAN MIGUEL'S CREEK WATER LEVEL </p>
 
-## <p align="justify"> Project based on: https://github.com/rwanrooy/TTGO-PAXCOUNTER-LoRa32-V2.1-TTN </p>
+## <p align="justify"> Project based on: [rwanrooy/TTGO-PAXCOUNTER-LoRa32-V2.1-TTN](https://github.com/rwanrooy/TTGO-PAXCOUNTER-LoRa32-V2.1-TTN) </p>
 
 <p align="justify"> In honour of Martin Cooper, Princesa de Asturias Award 2009, and Arlene Harris and their vision of IoP, The Internet of People, in MediaLab_ LPWAN we wanted to develop an IoT device that could improve the quality of the Polytechnic School of Engineering of Gijón. As a result, the idea of the Cooper Sensor came in as a LoRa device that could be left measuring the water level of San Miguel's creek without any need of mantainance. </p>
 
@@ -179,6 +179,14 @@ ___
 <br/>
 
 <p align="center"> http://4f566df1fed52c6e7fd5f661f64ae3eb.balena-devices.com:8080/d/vJhQNCZgz/sensores-jsn-sr04t-arroyo-de-san-miguel?from=now-24h&orgId=1&to=now&refresh=1m </p>
+
+___
+
+## License
+
+This project is licensed under the GPL-3.0 license. This project contains code from [rwanrooy/TTGO-PAXCOUNTER-LoRa32-V2.1-TTN](https://github.com/rwanrooy/TTGO-PAXCOUNTER-LoRa32-V2.1-TTN)
+
+___
 
 > [!IMPORTANT]
 > We will kindly answer doubts and read suggestions: [![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=for-the-badge&logo=Gmail&logoColor=white&link=mailto:medialablpwan@gmail.com)](mailto:medialablpwan@gmail.com)
