@@ -87,13 +87,13 @@ ___
 
 ### <p align="justify"> Libraries: </p>
 
-- LilyGO board library (Paste the link on the `Preferences` tab and choose `Board` as `TTGO LoRa32 OLED` in Arduino IDE): https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/boards/t3_s3_v1_x.json
+- <p align="justify"> LilyGO board library (Paste the link on the [Preferences] tab and choose [TTGO LoRa32 OLED] as [Board] in Arduino IDE): https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/boards/t3_s3_v1_x.json
 
-- LMIC (Copy the contents of the project file `main/lmic_project_config.h` to the library file `arduino-lmic/project_config/lmic_project_config.h` and uncomment the proper frequency for your region. The sketch does always look at the library folder for the configured region!): https://github.com/mcci-catena/arduino-lmic
+- <p align="justify"> LMIC (Copy the contents of the project file [main/lmic_project_config.h] to the library file [arduino-lmic/project_config/lmic_project_config.h] and uncomment the proper frequency for your region. The sketch does always look at the library folder for the configured region!): https://github.com/mcci-catena/arduino-lmic </p>
 
-- QuickMedianLib (To obtain more solid distance values): https://github.com/luisllamasbinaburo/Arduino-QuickMedian
+- <p align="justify"> QuickMedianLib (To obtain more solid distance values): https://github.com/luisllamasbinaburo/Arduino-QuickMedian </p>
 
-- ESP sleep (To reduce battery consumption): https://github.com/pycom/pycom-esp-idf/blob/master/components/esp32/include/esp_sleep.h
+- <p align="justify"> ESP sleep (To reduce battery consumption): https://github.com/pycom/pycom-esp-idf/blob/master/components/esp32/include/esp_sleep.h </p>
 
 > [!NOTE]
 > Other libraries, like SPI library, are easily downloadable from Arduino IDE
@@ -102,28 +102,28 @@ ___
 
 ### <p align="justify"> Main features: </p>
 
-- Developed using LilyGO LoRa32 OLED v2.1_1.6 (Supports solar recharging and battery management)
+- <p align="justify"> Developed using LilyGO LoRa32 OLED v2.1_1.6 (Supports solar recharging and battery management) </p>
 
   <div align="center">
     <img src="https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/Screenshot%202023-11-13%20194151.png" width="600"  style="margin: 10px;"/>
   </div>
   <br/>
 
-- Changes made for JSN-SR04T (Ultrasonic distance sensor)
+- <p align="justify"> Changes made for JSN-SR04T (Ultrasonic distance sensor) </p>
 
   <div align="center">
     <img src="https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/61rPJNXbuNL._AC_UF894%2C1000_QL80_.jpg" width="600"  style="margin: 10px;"/>
   </div>
   <br/>
 
-- Dynamic Data Transmission Rate implementation: send interval dynamically changes its value between 20 and 40 minutes depending on the typical deviation from the latest 5 distances sent to The Things Network (By OTAA; file `payload_formatter.json` is a suggestion on how to decode the sent bytes)
+- <p align="justify"> Dynamic Data Transmission Rate implementation: send interval dynamically changes its value between 20 and 40 minutes depending on the typical deviation from the latest 5 distances sent to The Things Network (By OTAA; file [payload_formatter.json] is a suggestion on how to decode the sent bytes) </p>
 
   <div align="center">
     <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-11-30%20182339.png" width="600"  style="margin: 10px;"/>
   </div>
   <br/>
 
-- Custom PCB
+- <p align="justify"> Custom PCB </p>
 
   <div align="center">
     <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-10-04%20142016.png" width="600"  style="margin: 10px;"/>
@@ -133,7 +133,7 @@ ___
 > [!TIP]
 > Consider soldering female pin connectors so the electronic components can simply be plugged in and unplugged if a repair has to be done
 
-- Custom housing to fit all the elements in the most efficient way
+- <p align="justify"> Custom housing to fit all the elements in the most efficient way </p>
 
   <div align="center">
     <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-12-01%20175741.png" width="600"  style="margin: 10px;"/>
@@ -145,7 +145,7 @@ ___
   <br/>
 
 > [!WARNING]
-> Clear colour PETG 3D printing filament is recommended to survive sun radiation and plastic deformations. An O-ring is also a good choice to fix and stabilize the sensor inside of the bell
+> Clear colour PETG 3D printing filament is recommended to survive sun radiation and plastic deformations. An O-ring is also a good choice to fix and stabilize the sensor inside of the bell. Four M3 screws are needed to fix the assembly
 
 ___
 
@@ -169,7 +169,7 @@ Access the Grafana panel[^1] via this QR code or the link below it:
 </div>
 <br/>
 
-http://4f566df1fed52c6e7fd5f661f64ae3eb.balena-devices.com:8080/d/vJhQNCZgz/sensores-jsn-sr04t-arroyo-de-san-miguel?from=now-24h&orgId=1&to=now&refresh=1m
+<p align="justify"> http://4f566df1fed52c6e7fd5f661f64ae3eb.balena-devices.com:8080/d/vJhQNCZgz/sensores-jsn-sr04t-arroyo-de-san-miguel?from=now-24h&orgId=1&to=now&refresh=1m </p>
 
 > [!IMPORTANT]
 > We will kindly answer doubts and read suggestions via e-mail: medialablpwan@gmail.com :shipit:
