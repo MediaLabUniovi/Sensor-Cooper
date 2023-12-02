@@ -1,15 +1,15 @@
-# SENSOR COOPER V3.2 - MEDIALAB LPWAN: ULTRASONIC SENSOR FOR MEASURING SAN MIGUEL'S CREEK WATER LEVEL
+# <p align="justify"> SENSOR COOPER V3.2 - MEDIALAB LPWAN: ULTRASONIC SENSOR FOR MEASURING SAN MIGUEL'S CREEK WATER LEVEL </p>
 
-## Project based on: https://github.com/rwanrooy/TTGO-PAXCOUNTER-LoRa32-V2.1-TTN
+## <p align="justify"> Project based on: https://github.com/rwanrooy/TTGO-PAXCOUNTER-LoRa32-V2.1-TTN </p>
 
-In honour of Martin Cooper, Princesa de Asturias Award 2009, and Arlene Harris and their vision of IoP, The Internet of People, in MediaLab_ LPWAN, we wanted to develop an IoT device that could improve the quality of the Polytechnic School of Engineering of Gijón. As a result, the idea of the Cooper Sensor came in as a LoRa device that could be left without any need of mantainance measuring the water level of San Miguel's creek.
+<p align="justify"> In honour of Martin Cooper, Princesa de Asturias Award 2009, and Arlene Harris and their vision of IoP, The Internet of People, in MediaLab_ LPWAN, we wanted to develop an IoT device that could improve the quality of the Polytechnic School of Engineering of Gijón. As a result, the idea of the Cooper Sensor came in as a LoRa device that could be left without any need of mantainance measuring the water level of San Miguel's creek. </p>
 
 <div align="center">
   <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/4_Martin%20Cooper%20y%20Arlene%20Harris.jpg" width="600"  style="margin: 10px;"/>
 </div>
 <br/>
 
-With these sensors, the aim is to monitor the possibility of a flood in the main building during the heavy rains season. Specifically, in 2018, a major flood took place turning useless many expensive equipment from the lower floors that were used by the students during the laboratory practices of many subjetcs:
+<p align="justify"> With these sensors, the aim is to monitor the possibility of a flood in the main building during the heavy rains season. Specifically, in 2018, a major flood took place turning useless many expensive equipment from the lower floors that were used by the students during the laboratory practices of many subjetcs: </p>
 
 <div align="center">
   <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/escuela-politecnica-ingenieria%20(4).jpg" width="600"  style="margin: 10px;"/>
@@ -24,11 +24,13 @@ With these sensors, the aim is to monitor the possibility of a flood in the main
 </div>
 <br/>
 
-In this repo, you will find all the files and teaching guides required to understand and even take the creative freedom to improve this project.
+<p align="justify"> In this repo, you will find all the files and teaching guides required to understand and even take the creative freedom to improve this project. </p>
 
 ___
 
-### Component list:
+### <p align="justify"> Component list: </p>
+
+<div align="center">
 
 | Component | Model |
 | ------------- | ------------- |
@@ -39,9 +41,13 @@ ___
 | PCB  | Custom (file included) |
 | Housing  | Custom (file included) |
 
+</div>
+
 ___
 
-### Connection list:
+### <p align="justify"> Connection list: </p>
+
+<div align="center">
 
 | JSN-SR04T | 18650 | SYP-S0606 | LilyGO |
 | ------------- | ------------- | ------------- | ------------- |
@@ -52,12 +58,14 @@ ___
 | - | `Bat Conn` | - | `Bat Conn` |
 | - | - | `USB` | `USB` |
 
+</div>
+
 > [!TIP]
 > The PCB (More info coming below) offers the possibility to connect a button between GPIO23 and GND to be programmed as desired
 
 ___
 
-### Flowchart (Simplified!)
+### <p align="justify"> Flowchart (Simplified!) </p>
 
 ```mermaid
 graph TD;
@@ -77,7 +85,7 @@ graph TD;
 
 ___
 
-### Libraries:
+### <p align="justify"> Libraries: </p>
 
 - LilyGO board library (Paste the link on the `Preferences` tab and choose `Board` as `TTGO LoRa32 OLED` in Arduino IDE): https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/boards/t3_s3_v1_x.json
 
@@ -92,7 +100,7 @@ ___
 
 ___
 
-### Main features:
+### <p align="justify"> Main features: </p>
 
 - Developed using LilyGO LoRa32 OLED v2.1_1.6 (Supports solar recharging and battery management)
 
@@ -141,7 +149,7 @@ ___
 
 ___
 
-The first unit has been deployed near the Polytechnic School of Engineering of Gijón:
+<p align="justify"> The first unit has been deployed near the Polytechnic School of Engineering of Gijón: </p>
 
 <div align="center">
   <img src="https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/9_Sensor%20Cooper%20en%20Arroyo%20de%20San%20Miguel.jpg" width="600"  style="margin: 10px;"/>
@@ -166,6 +174,6 @@ http://4f566df1fed52c6e7fd5f661f64ae3eb.balena-devices.com:8080/d/vJhQNCZgz/sens
 > [!IMPORTANT]
 > We will kindly answer doubts and read suggestions via e-mail: medialablpwan@gmail.com :shipit:
 
-_Authors: Daniel Rodríguez Moya, Óscar Gijón, Ramón Rubio and MediaLab LPWAN Workgroup_
+_<p align="justify"> Authors: Daniel Rodríguez Moya, Óscar Gijón, Ramón Rubio and MediaLab LPWAN Workgroup </p>_
 
 [^1]: Instructions on how to deploy Grafana panels are given on the repo `medialablpwan/documentacion`.
