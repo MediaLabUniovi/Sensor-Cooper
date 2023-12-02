@@ -124,7 +124,7 @@ graph TD;
   A[Turn on] -->|1| B(Wake up if in deep sleep)
   B -->|2| C(Get distance and battery measurement)
   C -->|3| D(Send bytes to TTN)
-  D -->|4| E(Time 20 minutes)
+  D -->|4| E(Time data transmission rate)
   E -->|5| F(Go to deep sleep)
   F -->|6| B
 ```
