@@ -1,3 +1,7 @@
+<div align="center">
+<img src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white" /> <img src="https://img.shields.io/badge/espressif-E7352C?style=for-the-badge&logo=espressif&logoColor=white" />
+</div>
+
 # <p align="justify"> SENSOR COOPER V3.2 - MEDIALAB_ LPWAN: ULTRASONIC SENSOR TO MEASURE SAN MIGUEL'S CREEK WATER LEVEL </p>
 
 ## <p align="justify"> Project based on: https://github.com/rwanrooy/TTGO-PAXCOUNTER-LoRa32-V2.1-TTN </p>
