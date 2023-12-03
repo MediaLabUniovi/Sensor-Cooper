@@ -15,14 +15,14 @@ ___
 <div align="justify">
 
 ## Table of contents
-- [Introduction](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#introduction)
-- [Component list](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-component-list-)
-- [Main features](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-main-features-)
-- [Connection list](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-connection-list-)
-- [Flowchart (Simplified!)](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-flowchart-simplified-)
-- [Libraries](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-libraries-)
-- [Deployment experiment](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-deployment-experiment-)
-- [License](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-license-)
+- [Introduction](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#introduction-leftwards_arrow_with_hook-)
+- [Component list](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-component-list-leftwards_arrow_with_hook-)
+- [Main features](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-main-features-leftwards_arrow_with_hook-)
+- [Connection list](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-connection-list-leftwards_arrow_with_hook-)
+- [Flowchart (Simplified!)](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-flowchart-simplified-leftwards_arrow_with_hook-)
+- [Libraries](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-libraries-leftwards_arrow_with_hook-)
+- [Deployment experiment](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-deployment-experiment-leftwards_arrow_with_hook-)
+- [License](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-license-leftwards_arrow_with_hook-)
 
 </div>
 
