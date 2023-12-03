@@ -57,7 +57,7 @@ In honour of Martin Cooper, Princesa de Asturias Award 2009, and Arlene Harris a
 </div>
 <br/>
 
-<p align="justify"> In this repo, you will find all the files and teaching guides required to fully understand and even take the creative freedom to improve this project. </p>
+<p align="justify"> In this repo, you will find all the files and teaching guides required to fully understand and even take the creative freedom to improve this project. Folders and files have been given a self-explanatory name to make navigation more intuituve. </p>
 
 ___
 
@@ -97,7 +97,11 @@ ___
 > [!WARNING]
 > This sensor is extremely sensitive to physical disturbances. Be sure to perfectly align it perpendicularly to the surface where the ultrasonic beam bounces and also mind having direct vision to it
 
-- <p align="justify"> Dynamic Data Transmission Rate implementation: send interval dynamically changes its value between 20 and 40 minutes depending on the typical deviation from the latest 5 distances sent to The Things Network (By OTAA; file [payload_formatter.json] is a suggestion on how to decode the sent bytes) </p>
+<div align="justify">
+
+- Dynamic Data Transmission Rate implementation: send interval dynamically changes its value between 20 and 40 minutes depending on the typical deviation from the latest 5 distances sent to The Things Network (By OTAA; file `payload_formatter.json` is a suggestion on how to decode the sent bytes)
+
+</div>
 
   <div align="center">
     <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-11-30%20182339.png" width="600"  style="margin: 10px;"/>
@@ -226,15 +230,19 @@ A more in depth analysis is given in the code itself as commments explain what e
 
 ___
 
-### <p align="justify"> Libraries [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents) </p>
+<div align="justify">
 
-- <p align="justify"> LilyGO board library (Paste the link on the [Preferences] tab and choose [TTGO LoRa32 OLED] as [Board] in Arduino IDE): https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/boards/t3_s3_v1_x.json
+### Libraries [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents)
 
-- <p align="justify"> LMIC (Copy the contents of the project file [main/lmic_project_config.h] to the library file [arduino-lmic/project_config/lmic_project_config.h] and uncomment the proper frequency for your region. The sketch does always look at the library folder for the configured region!): https://github.com/mcci-catena/arduino-lmic </p>
+- LilyGO board library (Paste the link on the `Preferences` tab and choose `TTGO LoRa32 OLED` as `Board` in Arduino IDE): https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/boards/t3_s3_v1_x.json
 
-- <p align="justify"> QuickMedianLib (To obtain more solid distance values): https://github.com/luisllamasbinaburo/Arduino-QuickMedian </p>
+- LMIC (Copy the contents of the project file `main/lmic_project_config.h` to the library file `arduino-lmic/project_config/lmic_project_config.h` and uncomment the proper frequency for your region. The sketch does always look at the library folder for the configured region!): https://github.com/mcci-catena/arduino-lmic
 
-- <p align="justify"> ESP sleep (To reduce battery consumption): https://github.com/pycom/pycom-esp-idf/blob/master/components/esp32/include/esp_sleep.h </p>
+- QuickMedianLib (To obtain more solid distance values): https://github.com/luisllamasbinaburo/Arduino-QuickMedian
+
+- ESP sleep (To reduce battery consumption): https://github.com/pycom/pycom-esp-idf/blob/master/components/esp32/include/esp_sleep.h
+
+</div>
 
 > [!NOTE]
 > Other libraries, like SPI library, are easily downloadable from Arduino IDE
