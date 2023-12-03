@@ -21,7 +21,7 @@ ___
 - [Connection list](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-connection-list-)
 - [Flowchart (Simplified!)](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-flowchart-simplified-)
 - [Libraries](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-libraries-)
-- [Deployment experiment]()
+- [Deployment experiment](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-deployment-experiment-)
 - [License](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-license-)
 
 </div>
@@ -30,7 +30,7 @@ ___
 
 <div align="justify">
 
-## Introduction
+## Introduction [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents)
 
 In honour of Martin Cooper, Princesa de Asturias Award 2009, and Arlene Harris and their vision of IoP, The Internet of People, in MediaLab_ LPWAN we wanted to develop an IoT device that could improve the quality of the Polytechnic School of Engineering of Gijón. As a result, the idea of the Cooper Sensor came in as a LoRa device, synchronizable with [The Things Network](https://www.thethingsnetwork.org/), that could be left measuring the water level of San Miguel's creek without any need of mantainance.
 
