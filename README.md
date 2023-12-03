@@ -20,6 +20,7 @@ ___
 - [Main features](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-main-features-leftwards_arrow_with_hook-)
 - [Connection list](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-connection-list-leftwards_arrow_with_hook-)
 - [Flowchart (Simplified!)](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-flowchart-simplified-leftwards_arrow_with_hook-)
+- [Code files](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-code-files-leftwards_arrow_with_hook-)
 - [Libraries](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-libraries-leftwards_arrow_with_hook-)
 - [Deployment experiment](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-deployment-experiment-leftwards_arrow_with_hook-)
 - [License](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-license-leftwards_arrow_with_hook-)
@@ -167,6 +168,61 @@ graph TD;
 > [!CAUTION]
 > Additional code may be needed if implementing I2C I/O. The functions to make them work are in the original project in `TTGO-PAXCOUNTER-LoRa32-V2.1-TTN/main/main.ino`
 
+___
+
+<div align="justify">
+
+### Code files [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents)
+
+In this section, a brief description on how the code is distributed among files in `medialablpwan/lorawaterlevelmonitoring/main/` is given.
+
+- `main.ino`
+  ```arduino
+  /*
+  Definition of global functions
+  Variables to be stored in the RTC memory
+  'setup()' and 'loop()' functions
+  */
+  ```
+- `sensor.ino`
+  ```arduino
+  /*
+  Functions and variables needed to make a sensor work
+  */
+  ```
+- `ddc.ino`
+  ```arduino
+  /*
+  Functions and variables for the implementation of the dynamic data transfer rate
+  */
+- `sleep.ino`
+  ```arduino
+  /*
+  Functions to activate ESP32's deep sleep mode
+  */
+- `ttn.ino`
+  ```arduino
+  /*
+  Functions from LMIC library
+  */
+- `configuration.h`
+  ```arduino
+  /*
+  Sensor macros and boolean toggles
+  */
+- `credentials.h`
+  ```arduino
+  /*
+  OTAA keys definition for TTN synchronization
+  */
+- `lmic_project_config.h`
+  ```arduino
+  /*
+  LoRa frequency band and radio chip selector
+  */
+A more in depth analysis is given in the code itself as commments explain what each function does.
+
+</div>
 ___
 
 ### <p align="justify"> Libraries [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents) </p>
