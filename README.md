@@ -17,12 +17,12 @@ ___
 ## Table of contents
 - [Introduction](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#introduction)
 - [Component list](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-component-list-)
-- Main features
-- Connection list
-- Flowchart (Simplified!)
-- Libraries
-- Deployment experiment
-- License
+- [Main features](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-main-features-)
+- [Connection list](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-connection-list-)
+- [Flowchart (Simplified!)](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-flowchart-simplified-)
+- [Libraries](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-libraries-)
+- [Deployment experiment]()
+- [License](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-license-)
 
 </div>
 
@@ -129,7 +129,7 @@ ___
 
 ___
 
-### <p align="justify"> Connection list: </p>
+### <p align="justify"> Connection list </p>
 
 <div align="center">
 
@@ -183,6 +183,10 @@ ___
 > Other libraries, like SPI library, are easily downloadable from Arduino IDE
 
 ___
+
+___
+
+## <p align="justify"> Deployment experiment </p>
 
 ### <p align="justify"> The first unit has been deployed near the Polytechnic School of Engineering of Gijón: </p>
 
