@@ -20,7 +20,7 @@ ___
 - [Main features](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-main-features-leftwards_arrow_with_hook-)
 - [Connection list](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-connection-list-leftwards_arrow_with_hook-)
 - [Flowchart (Simplified!)](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-flowchart-simplified-leftwards_arrow_with_hook-)
-- [Code files](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-code-files-leftwards_arrow_with_hook-)
+- [Code files](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#code-files-leftwards_arrow_with_hook)
 - [Libraries](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-libraries-leftwards_arrow_with_hook-)
 - [Deployment experiment](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-deployment-experiment-leftwards_arrow_with_hook-)
 - [License](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-license-leftwards_arrow_with_hook-)
@@ -162,19 +162,13 @@ graph TD;
   F -->|6| B
 ```
 
-> [!TIP]
-> Inside of folder `lorawaterlevelmonitoring/main`, the code is available and ready to flash or edit. The most important files to edit are `sensor.ino`, where any sensor can be implemented, and `configuration.h`, where the peripherals' macros are declared
-
-> [!CAUTION]
-> Additional code may be needed if implementing I2C I/O. The functions to make them work are in the original project in `TTGO-PAXCOUNTER-LoRa32-V2.1-TTN/main/main.ino`
-
 ___
 
 <div align="justify">
 
 ### Code files [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents)
 
-In this section, a brief description on how the code is distributed among files in `medialablpwan/lorawaterlevelmonitoring/main/` is given.
+In this section, a brief description on how the code is distributed among files in `medialablpwan/lorawaterlevelmonitoring/main/`, where the code is available and ready to flash or edit, is given:
 
 - `main.ino`
   ```arduino
@@ -223,6 +217,13 @@ In this section, a brief description on how the code is distributed among files 
 A more in depth analysis is given in the code itself as commments explain what each function does.
 
 </div>
+
+> [!TIP]
+> The most important files to edit are `sensor.ino`, where any sensor can be implemented, and `configuration.h`, where the peripherals' macros are declared
+
+> [!CAUTION]
+> Additional code may be needed if implementing I2C I/O. The functions to make them work are in the original project in `TTGO-PAXCOUNTER-LoRa32-V2.1-TTN/main/main.ino`
+
 ___
 
 ### <p align="justify"> Libraries [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents) </p>
