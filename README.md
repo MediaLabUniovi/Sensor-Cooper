@@ -60,7 +60,7 @@ In honour of Martin Cooper, Princesa de Asturias Award 2009, and Arlene Harris a
 
 ___
 
-### <p align="justify"> Component list </p>
+### <p align="justify"> Component list [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents) </p>
 
 <div align="center">
 
@@ -77,7 +77,7 @@ ___
 
 ___
 
-### <p align="justify"> Main features </p>
+### <p align="justify"> Main features [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents) </p>
 
 - <p align="justify"> Developed using LilyGO LoRa32 OLED v2.1_1.6 (ESP32 based board with built-in LoRa capabilities that supports solar recharging and battery management) </p>
 
@@ -129,7 +129,7 @@ ___
 
 ___
 
-### <p align="justify"> Connection list </p>
+### <p align="justify"> Connection list [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents) </p>
 
 <div align="center">
 
@@ -149,7 +149,7 @@ ___
 
 ___
 
-### <p align="justify"> Flowchart (Simplified!) </p>
+### <p align="justify"> Flowchart (Simplified!) [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents) </p>
 
 ```mermaid
 graph TD;
@@ -169,7 +169,7 @@ graph TD;
 
 ___
 
-### <p align="justify"> Libraries: </p>
+### <p align="justify"> Libraries [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents) </p>
 
 - <p align="justify"> LilyGO board library (Paste the link on the [Preferences] tab and choose [TTGO LoRa32 OLED] as [Board] in Arduino IDE): https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/boards/t3_s3_v1_x.json
 
@@ -186,7 +186,7 @@ ___
 
 ___
 
-## <p align="justify"> Deployment experiment </p>
+## <p align="justify"> Deployment experiment [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents) </p>
 
 ### <p align="justify"> The first unit has been deployed near the Polytechnic School of Engineering of Gijón: </p>
 
@@ -212,7 +212,7 @@ ___
 
 ___
 
-## <p align="justify"> License </p>
+## <p align="justify"> License [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents) </p>
 
 This project is licensed under the [GPL-3.0 license](https://github.com/rwanrooy/TTGO-PAXCOUNTER-LoRa32-V2.1-TTN/blob/master/LICENSE). Contains code from [rwanrooy/TTGO-PAXCOUNTER-LoRa32-V2.1-TTN](https://github.com/rwanrooy/TTGO-PAXCOUNTER-LoRa32-V2.1-TTN)
 
