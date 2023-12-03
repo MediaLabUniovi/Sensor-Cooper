@@ -10,7 +10,27 @@ _Powered by_
 
 </div>
 
+___
+
 <div align="justify">
+
+## Table of contents
+- Introduction
+- Component list
+- Main features
+- Connection list
+- Flowchart (Simplified!)
+- Libraries
+- Deployment experiment
+- License
+
+</div>
+
+___
+
+<div align="justify">
+
+## Introduction
 
 In honour of Martin Cooper, Princesa de Asturias Award 2009, and Arlene Harris and their vision of IoP, The Internet of People, in MediaLab_ LPWAN we wanted to develop an IoT device that could improve the quality of the Polytechnic School of Engineering of Gijón. As a result, the idea of the Cooper Sensor came in as a LoRa device, synchronizable with [The Things Network](https://www.thethingsnetwork.org/), that could be left measuring the water level of San Miguel's creek without any need of mantainance.
 
@@ -36,11 +56,11 @@ In honour of Martin Cooper, Princesa de Asturias Award 2009, and Arlene Harris a
 </div>
 <br/>
 
-<p align="justify"> In this repo, you will find all the files and teaching guides required to understand and even take the creative freedom to improve this project. </p>
+<p align="justify"> In this repo, you will find all the files and teaching guides required to fully understand and even take the creative freedom to improve this project. </p>
 
 ___
 
-### <p align="justify"> Component list: </p>
+### <p align="justify"> Component list </p>
 
 <div align="center">
 
@@ -57,7 +77,7 @@ ___
 
 ___
 
-### <p align="justify"> Main features: </p>
+### <p align="justify"> Main features </p>
 
 - <p align="justify"> Developed using LilyGO LoRa32 OLED v2.1_1.6 (ESP32 based board with built-in LoRa capabilities that supports solar recharging and battery management) </p>
 
