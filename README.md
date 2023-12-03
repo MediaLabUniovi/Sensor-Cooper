@@ -15,8 +15,8 @@ ___
 <div align="justify">
 
 ## Table of contents
-- Introduction
-- Component list
+- [Introduction](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#introduction)
+- [Component list](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-component-list-)
 - Main features
 - Connection list
 - Flowchart (Simplified!)
