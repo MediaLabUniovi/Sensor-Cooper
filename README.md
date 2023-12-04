@@ -101,12 +101,12 @@ ___
 
 - Dynamic Data Transmission Rate implementation: send interval dynamically changes its value between 20 and 40 minutes depending on the typical deviation from the latest 5 distances sent to The Things Network (By OTAA; file `payload_formatter.json` is a suggestion on how to decode the sent bytes)
 
-</div>
-
   <div align="center">
     <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-11-30%20182339.png" width="600"  style="margin: 10px;"/>
   </div>
   <br/>
+
+</div>
 
 - <p align="justify"> Custom PCB </p>
 
