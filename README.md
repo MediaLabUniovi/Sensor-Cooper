@@ -175,7 +175,7 @@ ___
 In this section, a brief description on how the code is distributed among files in `medialablpwan/lorawaterlevelmonitoring/main/`, where the code is available and ready to flash or edit, is given:
 
 - `main.ino`
-  ```arduino
+  ```C
   /*
   Definition of global functions
   Variables to be stored in the RTC memory
@@ -183,42 +183,42 @@ In this section, a brief description on how the code is distributed among files 
   */
   ```
 - `sensor.ino`
-  ```arduino
+  ```C
   /*
   Functions and variables needed to make a sensor work
   */
   ```
 - `ddc.ino`
-  ```arduino
+  ```C
   /*
   Functions and variables for the implementation of the dynamic data transfer rate
   */
 - `sleep.ino`
-  ```arduino
+  ```C
   /*
   Functions to activate ESP32's deep sleep mode
   */
 - `ttn.ino`
-  ```arduino
+  ```C
   /*
   Functions from LMIC library
   */
 - `configuration.h`
-  ```arduino
+  ```C
   /*
   Sensor macros and boolean toggles
   */
 - `credentials.h`
-  ```arduino
+  ```C
   /*
   OTAA keys definition for TTN synchronization
   */
 - `lmic_project_config.h`
-  ```arduino
+  ```C
   /*
   LoRa frequency band and radio chip selector
   */
-A more in depth analysis is given in the code itself as commments explain what each function does.
+A more in depth analysis is given in the code itself as comments explain what each function does.
 
 </div>
 
