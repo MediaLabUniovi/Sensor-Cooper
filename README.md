@@ -136,7 +136,7 @@ ___
 
   > Assembly example:
   <div align="center">
-    <img src="" width="600"  style="margin: 10px;"/>
+    <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/5_Carcasa%20%2B%20Electr%C3%B3nica%20montada.jpg" width="600"  style="margin: 10px;"/>
   </div>
   <br/>
 
