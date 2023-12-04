@@ -134,6 +134,12 @@ ___
   </div>
   <br/>
 
+  > Assembly example:
+  <div align="center">
+    <img src="" width="600"  style="margin: 10px;"/>
+  </div>
+  <br/>
+
 > [!WARNING]
 > Clear colour PETG 3D printing filament is recommended to survive sun radiation and plastic deformations. An O-ring is also a good choice to fix and stabilize the sensor inside of the bell. Four M3 screws are needed to fix the assembly
 
@@ -153,6 +159,13 @@ ___
 | - | - | `USB` | `USB` |
 
 </div>
+
+> On a breadboard it looks the following way:
+
+<div align="center">
+  <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/1_ensayo.jpg" width="600"  style="margin: 10px;"/>
+</div>
+<br/>
 
 > [!TIP]
 > The PCB offers the possibility to connect a button between GPIO23 and GND to be programmed as desired
