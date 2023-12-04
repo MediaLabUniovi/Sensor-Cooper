@@ -299,4 +299,4 @@ ___
 
 _<p align="justify"> Authors: Daniel Rodríguez Moya, Óscar Gijón, Ramón Rubio and MediaLab LPWAN Workgroup :shipit: </p>_
 
-[^1]: Instructions on how to deploy Grafana panels are given on the repo `medialablpwan/documentacion`.
+[^1]: Instructions on how to deploy Grafana panels are given on the repo [`medialablpwan/documentacion`](https://github.com/medialablpwan/documentacion).
