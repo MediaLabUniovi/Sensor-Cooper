@@ -99,7 +99,7 @@ ___
 
 <div align="justify">
 
-- Dynamic Data Transmission Rate implementation: send interval dynamically changes its value between 20 and 40 minutes depending on the typical deviation from the latest 5 distances sent to The Things Network (By OTAA; file `payload_formatter.json` is a suggestion on how to decode the sent bytes)
+- Dynamic Data Transmission Rate implementation: send interval dynamically changes its value between 20 and 40 minutes depending on the typical deviation from the latest 5 distances sent to The Things Network (By OTAA; file [`payload_formatter.json`](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/payload_formatter.json) is a suggestion on how to decode the sent bytes)
 
   <div align="center">
     <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-11-30%20182339.png" width="600"  style="margin: 10px;"/>
@@ -226,7 +226,7 @@ A more in depth analysis is given in the code itself as comments explain what ea
 > The most important files to edit are `sensor.ino`, where any sensor can be implemented, and `configuration.h`, where the peripherals' macros are declared
 
 > [!CAUTION]
-> Additional code may be needed if implementing I2C I/O. The functions to make them work are in the original project in `TTGO-PAXCOUNTER-LoRa32-V2.1-TTN/main/main.ino`
+> Additional code may be needed if implementing I2C I/O. The functions to make them work are in the original project in [`TTGO-PAXCOUNTER-LoRa32-V2.1-TTN/main/main.ino`](https://github.com/rwanrooy/TTGO-PAXCOUNTER-LoRa32-V2.1-TTN/blob/master/main/main.ino)
 
 ___
 
