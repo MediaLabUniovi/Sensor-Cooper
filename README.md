@@ -67,10 +67,10 @@ ___
 
 | Component | Model |
 | ------------- | ------------- |
-| Dev Module  | LilyGO LoRa32 OLED v2.1_1.6 |
-| Distance sensor  | JSN-SR04T |
-| Battery  | 18650 |
-| Solar panel  | SYP-S0606 |
+| Dev Module  | [LilyGO LoRa32 OLED v2.1_1.6](https://www.tinytronics.nl/shop/en/development-boards/microcontroller-boards/with-lora/lilygo-ttgo-t3-lora32-868mhz-v1.6.1-esp32) |
+| Distance sensor  | [JSN-SR04T](https://www.tinytronics.nl/shop/en/sensors/distance/waterproof-ultrasonic-sensor-jsn-sr04t) |
+| Battery  | [18650](https://www.tinytronics.nl/shop/en/power/batteries/18650/eve-18650-li-ion-battery-3100mah-10a-inr18650-33v) |
+| Solar panel  | [SYP-S0606](https://www.tinytronics.nl/shop/en/power/solar-energy/solar-panels/solar-panel-with-dc-dc-converter-and-usb-5v-1a) |
 | PCB  | Custom (file included) |
 | Housing  | Custom (file included) |
 
