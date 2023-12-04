@@ -211,7 +211,7 @@ In this section, a brief description on how the code is distributed among files 
 - [`credentials.h`](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/main/credentials.h)
   ```C
   /*
-  OTAA keys definition for TTN synchronization
+  OTAA keys for TTN synchronization
   */
 - [`lmic_project_config.h`](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/main/lmic_project_config.h)
   ```C
