@@ -172,9 +172,9 @@ ___
 
 ### Code files [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents)
 
-In this section, a brief description on how the code is distributed among files in `medialablpwan/lorawaterlevelmonitoring/main/`, where the code is available and ready to flash or edit, is given:
+In this section, a brief description on how the code is distributed among files in [`medialablpwan/lorawaterlevelmonitoring/main/`](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main/main), where the code is available and ready to flash or edit, is given:
 
-- `main.ino`
+- [`main.ino`](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/main/main.ino)
   ```C
   /*
   Definition of global functions
@@ -182,38 +182,38 @@ In this section, a brief description on how the code is distributed among files 
   'setup()' and 'loop()' functions
   */
   ```
-- `sensor.ino`
+- [`sensor.ino`](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/main/sensor.ino)
   ```C
   /*
   Functions and variables needed to make a sensor work
   */
   ```
-- `ddc.ino`
+- [`ddc.ino`](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/main/ddc.ino)
   ```C
   /*
   Functions and variables for the implementation of the dynamic data transfer rate
   */
-- `sleep.ino`
+- [`sleep.ino`](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/main/sleep.ino)
   ```C
   /*
   Functions to activate ESP32's deep sleep mode
   */
-- `ttn.ino`
+- [`ttn.ino`](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/main/ttn.ino)
   ```C
   /*
   Functions from LMIC library
   */
-- `configuration.h`
+- [`configuration.h`](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/main/configuration.h)
   ```C
   /*
   Sensor macros and boolean toggles
   */
-- `credentials.h`
+- [`credentials.h`](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/main/credentials.h)
   ```C
   /*
   OTAA keys definition for TTN synchronization
   */
-- `lmic_project_config.h`
+- [`lmic_project_config.h`](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/main/lmic_project_config.h)
   ```C
   /*
   LoRa frequency band and radio chip selector
