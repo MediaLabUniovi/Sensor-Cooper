@@ -1,3 +1,9 @@
+<div align="right">
+
+[![english](https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/16/country-4x3/gb.png)](./README.md) | [![spanish](https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/16/country-4x3/es.png)](./README_ES.md)
+
+</div>
+
 # <p align="justify"> SENSOR COOPER V3.2 - MEDIALAB_ LPWAN: LORA ULTRASONIC SENSOR TO MEASURE SAN MIGUEL'S CREEK WATER LEVEL </p>
 
 <div align="center">
