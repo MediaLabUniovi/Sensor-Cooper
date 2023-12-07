@@ -4,7 +4,7 @@
 
 </div>
 
-# <p align="justify"> SENSOR COOPER V3.2 - MEDIALAB_ LPWAN: SENSOR ULTRASÓNICO CONECTADOR POR LORA PARA MEDIR EL NIVEL DE AGUA DEL ARROYO DE SAN MIGUEL </p>
+# <p align="justify"> SENSOR COOPER V3.2 - MEDIALAB_ LPWAN: SENSOR ULTRASÓNICO CONECTADO POR LORA PARA MEDIR EL NIVEL DE AGUA DEL ARROYO DE SAN MIGUEL </p>
 
 <div align="center">
 
@@ -40,7 +40,7 @@ ___
 
 ## Introducción [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents)
 
-En homenaje a Martin Cooper, inventor del teléfono móvil en 1973 y Premio Princesa de Asturias 2009, y Arlene Harris y su visión del Internet de las Personas, en MediaLab LPWAN quisimos desarrollar un dispositivo IoT que pudiese mejorar la calidad del campus de la Escuela Politécnica de Ingeniería de Gijón. Como resultado, la idea del Sensor Cooper nació como un nodo conectado por LoRa, sincronizable con The Things Network, que pudiese quedar midiendo el nivel de agua del Arroyo de San Miguel sin ninguna necesidad de hacerle mantenimientos.
+En homenaje a Martin Cooper, inventor del teléfono móvil en 1973 y Premio Princesa de Asturias 2009, y Arlene Harris y su visión del Internet de las Personas, en MediaLab LPWAN quisimos desarrollar un dispositivo IoT que pudiese mejorar la calidad del campus de la Escuela Politécnica de Ingeniería de Gijón. Como resultado, la idea del Sensor Cooper nació como un nodo conectado por LoRa, sincronizable con [The Things Network](https://www.thethingsnetwork.org/), que pudiese quedar midiendo el nivel de agua del Arroyo de San Miguel sin ninguna necesidad de hacerle mantenimientos.
 
 </div>
 
@@ -130,7 +130,7 @@ ___
   <br/>
 
 > [!WARNING]
-> Filamento de impresión 3D de PETG de color claro es muy recomendable para sobrevivir a la radiación solar y a las deformaciones plásticas. Una tórica es una buena opción para fijar y estabilizar el sensor dentro de la campana. Hacen falta cuatro tornillos M3 para fijar el ensamblado
+> Es muy recomendable emplear filamento de impresión 3D de PETG de color claro para sobrevivir a la radiación solar y a las deformaciones plásticas. Una tórica es una buena opción para fijar y estabilizar el sensor dentro de la campana. Hacen falta cuatro tornillos M3 para fijar el ensamblado
 
 ___
 
@@ -196,75 +196,75 @@ ___
 
 ### Archivos de código [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents)
 
-In this section, a brief description on how the code is distributed among files in [`medialablpwan/lorawaterlevelmonitoring/main/`](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main/main), where the code is available and ready to flash or edit, is given:
+En esta sección, se da una descripción breve a cómo está distribuido el código entre los archivos en [`medialablpwan/lorawaterlevelmonitoring/main/`](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main/main), donde el código está disponible para flashear o editar:
 
 - [`main.ino`](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/main/main.ino)
   ```C
   /*
-  Definition of global functions
-  Variables to be stored in the RTC memory
-  'setup()' and 'loop()' functions
+  Definición de funciones globales
+  Variables a ser almacenadas en la memoria RTC
+  Funciones 'setup()' y 'loop()'
   */
   ```
 - [`sensor.ino`](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/main/sensor.ino)
   ```C
   /*
-  Functions and variables needed to make a sensor work
+  Funciones y variables necesarias para hacer funcionar el sensor
   */
   ```
 - [`ddc.ino`](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/main/ddc.ino)
   ```C
   /*
-  Functions and variables for the implementation of the dynamic data transfer rate
+  Funciones y variables para la implementación de la tasa dinámica de transferencia de datos
   */
 - [`sleep.ino`](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/main/sleep.ino)
   ```C
   /*
-  Functions to activate ESP32's deep sleep mode
+  Funciones para activar el modo deep sleep de la ESP32
   */
 - [`ttn.ino`](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/main/ttn.ino)
   ```C
   /*
-  Functions from LMIC library
+  Funciones de la librería LMIC
   */
 - [`configuration.h`](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/main/configuration.h)
   ```C
   /*
-  Sensor macros and boolean toggles
+  Macros de los sensores y opciones ON/OFF
   */
 - [`credentials.h`](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/main/credentials.h)
   ```C
   /*
-  OTAA keys for TTN synchronization
+  Claves OTAA para la sincronización en TTN
   */
 - [`lmic_project_config.h`](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/main/lmic_project_config.h)
   ```C
   /*
-  LoRa frequency band and radio chip selector
+  Banda de frecuencia LoRa y selector del chip de radio
   */
-A more in depth analysis is given in the code itself as comments explain what each function does.
+Un análisis más en profundidad viene dado en el propio código ya que cada función está explicada con comentarios.
 
 </div>
 
 > [!TIP]
-> The most important files to edit are `sensor.ino`, where any sensor can be implemented, and `configuration.h`, where the peripherals' macros are declared
+> Los archivos más importantes a editar son `sensor.ino`, donde se puede implementar cualquier sensor, y `configuration.h`, donde se declaran las macros de los periféricos
 
 > [!CAUTION]
-> Additional code may be needed if implementing I2C I/O. The functions to make them work are in the original project in [`TTGO-PAXCOUNTER-LoRa32-V2.1-TTN/main/main.ino`](https://github.com/rwanrooy/TTGO-PAXCOUNTER-LoRa32-V2.1-TTN/blob/master/main/main.ino)
+> Se necesita código adicional para implementar I/O por I2C. Las funciones para hacerlo funcionar están en el proyecto original en [`TTGO-PAXCOUNTER-LoRa32-V2.1-TTN/main/main.ino`](https://github.com/rwanrooy/TTGO-PAXCOUNTER-LoRa32-V2.1-TTN/blob/master/main/main.ino)
 
 ___
 
 <div align="justify">
 
-### Libraries [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents)
+### Librarías [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents)
 
-- LilyGO board library (Paste the link on the `Preferences` tab and choose `TTGO LoRa32 OLED` as `Board` in Arduino IDE): https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/boards/t3_s3_v1_x.json
+- Librería de placas de LilyGO (Copiar el link en la tab de `Preferences` y escoger `TTGO LoRa32 OLED` como `Board` en Arduino IDE): https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/boards/t3_s3_v1_x.json
 
-- LMIC (Copy the contents of the project file `main/lmic_project_config.h` to the library file `arduino-lmic/project_config/lmic_project_config.h` and uncomment the proper frequency for your region. The sketch does always look at the library folder for the configured region!): https://github.com/mcci-catena/arduino-lmic
+- LMIC (Copia los contenidos del archivo del proyecto `main/lmic_project_config.h` al archivo de la librería `arduino-lmic/project_config/lmic_project_config.h` y desmarca la banda de frecuencia correspondiente a tu región. ¡El sketch siempre busca la configuración de región en la carpeta de la librería!): https://github.com/mcci-catena/arduino-lmic
 
-- QuickMedianLib (To obtain more solid distance values): https://github.com/luisllamasbinaburo/Arduino-QuickMedian
+- QuickMedianLib (Para obtener medidas de distancia más sólidas): https://github.com/luisllamasbinaburo/Arduino-QuickMedian
 
-- ESP sleep (To reduce battery consumption): https://github.com/pycom/pycom-esp-idf/blob/master/components/esp32/include/esp_sleep.h
+- ESP sleep (Para reducir el consumo de la batería): https://github.com/pycom/pycom-esp-idf/blob/master/components/esp32/include/esp_sleep.h
 
 </div>
 
