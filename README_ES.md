@@ -38,9 +38,9 @@ ___
 
 <div align="justify">
 
-## Introduction [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents)
+## Introducción [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents)
 
-In honour of Martin Cooper, Princesa de Asturias Award 2009, and Arlene Harris and their vision of IoP, The Internet of People, in MediaLab_ LPWAN we wanted to develop an IoT device that could improve the quality of the Polytechnic School of Engineering of Gijón. As a result, the idea of the Cooper Sensor came in as a LoRa device, synchronizable with [The Things Network](https://www.thethingsnetwork.org/), that could be left measuring the water level of San Miguel's creek without any need of mantainance.
+En homenaje a Martin Cooper, inventor del teléfono móvil en 1973 y Premio Princesa de Asturias 2009, y Arlene Harris y su visión del Internet de las Personas, en MediaLab LPWAN quisimos desarrollar un dispositivo IoT que pudiese mejorar la calidad del campus de la Escuela Politécnica de Ingeniería de Gijón. Como resultado, la idea del Sensor Cooper nació como un nodo conectado por LoRa, sincronizable con The Things Network, que pudiese quedar midiendo el nivel de agua del Arroyo de San Miguel sin ninguna necesidad de hacerle mantenimientos.
 
 </div>
 
@@ -49,7 +49,7 @@ In honour of Martin Cooper, Princesa de Asturias Award 2009, and Arlene Harris a
 </div>
 <br/>
 
-<p align="justify"> With these sensors, the aim is to monitor the possibility of a flood in the main building during the heavy rains season. Specifically, in 2018, a major flood took place turning useless many expensive equipment from the lower floors that were used by the students during the laboratory practices of many subjetcs: </p>
+<p align="justify"> Con estos sensores, el objetivo es monitorizar la posibilidad de una inundación en el Edificio Polivalente durante la temporada de lluvias intensas. Específicamente, en 2018, una gran inundación tuvo lugar dejando inservible multitud de equipamiento valorado en decenas de miles de euros que estaban siendo usados por los estudiantes durante las prácticas de laboratorio de diversas asignaturas. Por ello, ésta es una situación que no podemos dejar que se repita: </p>
 
 <div align="center">
   <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/escuela-politecnica-ingenieria%20(4).jpg" width="600"  style="margin: 10px;"/>
@@ -64,20 +64,20 @@ In honour of Martin Cooper, Princesa de Asturias Award 2009, and Arlene Harris a
 </div>
 <br/>
 
-<p align="justify"> In this repo, you will find all the files and teaching guides required to fully understand and even take the creative freedom to improve this project. Folders and files have been given a self-explanatory name to make navigation more intuituve. </p>
+<p align="justify"> En este repositorio, encontrarás todos los archivos y guías educativas necesarias para entender con totalidad e incluso tomarte la libertad creativa de mejorar este proyecto. Las carpetas y archivos han sido llamados con nombres que se explican a ellos mismos para hacer la navegación más intuitiva. </p>
 
 ___
 
-### <p align="justify"> Main features [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents) </p>
+### <p align="justify"> Características principales [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents) </p>
 
-- <p align="justify"> Developed using LilyGO LoRa32 OLED v2.1_1.6 (ESP32 based board with built-in LoRa capabilities that supports solar recharging and battery management) </p>
+- <p align="justify"> Desarrollado usando la LilyGO LoRa32 OLED v2.1_1.6 (Una placa basada en ESP32 con LoRa implementado y que soporta recarga con panel solar y gestión de batería) </p>
 
   <div align="center">
     <img src="https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/Screenshot%202023-11-13%20194151.png" width="600"  style="margin: 10px;"/>
   </div>
   <br/>
 
-- <p align="justify"> Changes made for JSN-SR04T (Ultrasonic distance sensor) </p>
+- <p align="justify"> Cambios realizados para JSN-SR04T (Sensor ultrasónico de distancia) </p>
 
   <div align="center">
     <img src="https://github.com/medialablpwan/waterlevelcontrol/blob/main/pics/61rPJNXbuNL._AC_UF894%2C1000_QL80_.jpg" width="600"  style="margin: 10px;"/>
@@ -85,11 +85,11 @@ ___
   <br/>
 
 > [!WARNING]
-> This sensor is extremely sensitive to physical disturbances. Be sure to perfectly align it perpendicularly to the surface where the ultrasonic beam bounces and also mind having direct vision to it
+> Este sensor es extremádamente sensible a perturbaciones físicas. Estate seguro de alinearlo perfectamente de forma perpendicular con la superficie donde rebote el haz y de tener visión directa a ella
 
 <div align="justify">
 
-- Dynamic Data Transmission Rate implementation: send interval dynamically changes its value between 20 and 40 minutes depending on the typical deviation from the latest 5 distances sent to The Things Network (By OTAA; file [`payload_formatter.json`](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/payload_formatter.json) is a suggestion on how to decode the sent bytes)
+- Tasa dinámica de transmisión de datos: el intervalo de envío cambia automáticamente su valor entre 20 y 40 minutos en función de la desviación típica de las últimas 5 medidas enviadas a TTN. (Por OTAA, [`payload_formatter.json`](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/payload_formatter.json) es una sugerencia de cómo decodificar los bytes enviados)
 
   <div align="center">
     <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-11-30%20182339.png" width="600"  style="margin: 10px;"/>
@@ -98,7 +98,7 @@ ___
 
 </div>
 
-- <p align="justify"> Custom PCB </p>
+- <p align="justify"> PCB a medida </p>
 
   <div align="center">
     <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-10-04%20142016.png" width="600"  style="margin: 10px;"/>
@@ -106,9 +106,9 @@ ___
   <br/>
 
 > [!TIP]
-> Consider soldering female pin connectors so the electronic components can simply be plugged in and unplugged if a repair has to be done
+> Considera soldar conectores hembra para pines para que los componentes se puedan conectar y desconectar de forma simple en caso de tener que hacer una reparación
 
-- <p align="justify"> Custom housing to fit all the elements in the most efficient way (Container + Solar panel holder + USB protector) </p>
+- <p align="justify"> Carcasa a medida para encajar todos los componentes de la forma más eficiente (Recipiente + Soporte del panel solar + Protector del conector USB) </p>
 
   <div align="center">
     <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-12-01%20175741.png" width="600"  style="margin: 10px;"/>
@@ -123,35 +123,35 @@ ___
   </div>
   <br/>
 
-  > Assembly example:
+  > Ejemplo de ensamblaje:
   <div align="center">
     <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/5_Carcasa%20%2B%20Electr%C3%B3nica%20montada.jpg" width="600"  style="margin: 10px;"/>
   </div>
   <br/>
 
 > [!WARNING]
-> Clear colour PETG 3D printing filament is recommended to survive sun radiation and plastic deformations. An O-ring is also a good choice to fix and stabilize the sensor inside of the bell. Four M3 screws are needed to fix the assembly
+> Filamento de impresión 3D de PETG de color claro es muy recomendable para sobrevivir a la radiación solar y a las deformaciones plásticas. Una tórica es una buena opción para fijar y estabilizar el sensor dentro de la campana. Hacen falta cuatro tornillos M3 para fijar el ensamblado
 
 ___
 
-### <p align="justify"> Component list [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents) </p>
+### <p align="justify"> Lista de componentes [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents) </p>
 
 <div align="center">
 
-| Component | Model |
+| Componente | Modelo |
 | ------------- | ------------- |
-| Dev Module  | [LilyGO LoRa32 OLED v2.1_1.6](https://www.tinytronics.nl/shop/en/development-boards/microcontroller-boards/with-lora/lilygo-ttgo-t3-lora32-868mhz-v1.6.1-esp32) |
-| Distance sensor  | [JSN-SR04T](https://www.tinytronics.nl/shop/en/sensors/distance/waterproof-ultrasonic-sensor-jsn-sr04t) |
-| Battery  | [18650](https://www.tinytronics.nl/shop/en/power/batteries/18650/eve-18650-li-ion-battery-3100mah-10a-inr18650-33v) |
-| Solar panel  | [SYP-S0606](https://www.tinytronics.nl/shop/en/power/solar-energy/solar-panels/solar-panel-with-dc-dc-converter-and-usb-5v-1a) |
-| PCB  | [Custom (file included)](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main/pcb) |
-| Housing  | [Custom (file included)](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main/carc) |
+| Placa  | [LilyGO LoRa32 OLED v2.1_1.6](https://www.tinytronics.nl/shop/en/development-boards/microcontroller-boards/with-lora/lilygo-ttgo-t3-lora32-868mhz-v1.6.1-esp32) |
+| Sensor de distancia  | [JSN-SR04T](https://www.tinytronics.nl/shop/en/sensors/distance/waterproof-ultrasonic-sensor-jsn-sr04t) |
+| Batería  | [18650](https://www.tinytronics.nl/shop/en/power/batteries/18650/eve-18650-li-ion-battery-3100mah-10a-inr18650-33v) |
+| Panel solar  | [SYP-S0606](https://www.tinytronics.nl/shop/en/power/solar-energy/solar-panels/solar-panel-with-dc-dc-converter-and-usb-5v-1a) |
+| PCB  | [A medida (archivo incluido)](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main/pcb) |
+| Carcasa  | [A medida (archivo inlcuido)](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main/carc) |
 
 </div>
 
 ___
 
-### <p align="justify"> Connection list [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents) </p>
+### <p align="justify"> Lista de conexiones [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents) </p>
 
 <div align="center">
 
@@ -161,12 +161,12 @@ ___
 | `echo` | - | - | `12` |
 | `5v` | - | - | `00` |
 | `GND` | - | - | `GND` |
-| - | `Bat Conn` | - | `Bat Conn` |
+| - | `Con Bat` | - | `Con Bat` |
 | - | - | `USB` | `USB` |
 
 </div>
 
-> On a breadboard it looks the following way:
+> En una protoboard se ve de la siguienta forma:
 
 <div align="center">
   <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/1_ensayo.jpg" width="600"  style="margin: 10px;"/>
@@ -174,19 +174,19 @@ ___
 <br/>
 
 > [!TIP]
-> The PCB offers the possibility to connect a button between GPIO23 and GND to be programmed as desired
+> La PCB ofrece la posibilidad de conectar un botón entre GPIO23 y GND para ser programado como se desee
 
 ___
 
-### <p align="justify"> Flowchart (Simplified!) [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents) </p>
+### <p align="justify"> Flujograma (¡Simplificado!) [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents) </p>
 
 ```mermaid
 graph TD;
-  A[Turn on] -->|1| B(Wake up if in deep sleep)
-  B -->|2| C(Get distance and battery measurement)
-  C -->|3| D(Send bytes to TTN)
-  D -->|4| E(Time data transmission rate)
-  E -->|5| F(Go to deep sleep)
+  A[Encender] -->|1| B(Despertarse si se está en deep sleep)
+  B -->|2| C(Obtener la medida de la distancia y batería)
+  C -->|3| D(Mandar los bytes a TTN)
+  D -->|4| E(Temporizar la tasa de transmisión de datos)
+  E -->|5| F(Ir a deep sleep)
   F -->|6| B
 ```
 
@@ -194,7 +194,7 @@ ___
 
 <div align="justify">
 
-### Code files [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents)
+### Archivos de código [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents)
 
 In this section, a brief description on how the code is distributed among files in [`medialablpwan/lorawaterlevelmonitoring/main/`](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main/main), where the code is available and ready to flash or edit, is given:
 
