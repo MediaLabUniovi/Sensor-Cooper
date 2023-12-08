@@ -32,12 +32,14 @@
 *.app
 
 # Ignore pictures
+pics
 *.jpg
 *.jpeg
 *.png
 *.gif
 
 # Ignore Gerber PCB files
+pcb
 *.ger
 *.gbr
 *.gbl
@@ -49,4 +51,5 @@
 *.gtp
 
 # Ignore SLT files
+carc
 *.slt
