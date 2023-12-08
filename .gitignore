@@ -30,3 +30,23 @@
 *.exe
 *.out
 *.app
+
+# Ignore pictures
+*.jpg
+*.jpeg
+*.png
+*.gif
+
+# Ignore Gerber PCB files
+*.ger
+*.gbr
+*.gbl
+*.gtl
+*.gbo
+*.gto
+*.gbs
+*.gts
+*.gtp
+
+# Ignore SLT files
+*.slt
