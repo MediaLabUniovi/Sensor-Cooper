@@ -4,6 +4,8 @@
 
 </div>
 
+![Static Badge](https://img.shields.io/badge/stability-beta-%23009680)
+
 # <p align="justify"> SENSOR COOPER V3.2 - MEDIALAB_ LPWAN: LORA ULTRASONIC SENSOR TO MEASURE SAN MIGUEL'S CREEK WATER LEVEL </p>
 
 <div align="center">
