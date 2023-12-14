@@ -4,6 +4,8 @@
 
 </div>
 
+![Static Badge](https://img.shields.io/badge/stability-beta-%23009680)
+
 # <p align="justify"> SENSOR COOPER V3.2 - MEDIALAB_ LPWAN: SENSOR ULTRASÓNICO CONECTADO POR LORA PARA MEDIR EL NIVEL DE AGUA DEL ARROYO DE SAN MIGUEL </p>
 
 <div align="center">
