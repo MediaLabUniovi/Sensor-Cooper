@@ -141,12 +141,12 @@ ___
 
 ### To-do list [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents)
 
-The following list enumarates all the tasks involved in the research process of this project and if they have been strictly completed:
+The following list enumarates all the tasks involved in the researching process of this project and if they have been strictly completed:
 
 - [ ] Full understanding of the development board and its pinout
 ```diff
-- Some pins are conflictive due to poor manufacturer documentation,
-- so testing is still being carried out
+- Some pins are conflictive due to poor manufacturer documentation, so testing is still being
+- carried out
 ```
 
 - [x] Full understanding of the sensor working mode and alternative modes
@@ -159,9 +159,8 @@ The following list enumarates all the tasks involved in the research process of 
 
 - [ ] Low power hardware components
 ```diff
-- A transistor is being tried to be implemented so the sensor can
-- be powered on from the board's 5V pin and powered off when goind
-- to deep slee, but it is getting tricky
+- A transistor is being tried to be implemented so the sensor can be powered-on from the
+- board's 5V pin and powered-off when going to deep slee, but it is getting tricky
 ```
 
 - [ ] PCB design
