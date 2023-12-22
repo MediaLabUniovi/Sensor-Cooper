@@ -25,6 +25,7 @@ ___
 ## Table of contents
 - [Introduction](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#introduction-leftwards_arrow_with_hook)
 - [Main features](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-main-features-leftwards_arrow_with_hook-)
+- [To-Do list](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main?tab=readme-ov-file#to-do-list-leftwards_arrow_with_hook)
 - [Component list](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-component-list-leftwards_arrow_with_hook-)
 - [Connection list](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-connection-list-leftwards_arrow_with_hook-)
 - [Flowchart (Simplified!)](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#-flowchart-simplified-leftwards_arrow_with_hook-)
@@ -144,7 +145,8 @@ The following list enumarates all the tasks involved in the research process of 
 
 - [ ] Full understanding of the development board and its pinout
 ```diff
-- Some pins are conflictive due to poor manufacturer documentation, so testing is still being carried out
+- Some pins are conflictive due to poor manufacturer documentation,
+- so testing is still being carried out
 ```
 
 - [x] Full understanding of the sensor working mode and alternative modes
@@ -157,7 +159,9 @@ The following list enumarates all the tasks involved in the research process of 
 
 - [ ] Low power hardware components
 ```diff
-- A transistor is being tried to be implemented so the sensor can be powered on from the board's 5V pin and powered off when goind to deep slee, but it is getting tricky
+- A transistor is being tried to be implemented so the sensor can
+- be powered on from the board's 5V pin and powered off when goind
+- to deep slee, but it is getting tricky
 ```
 
 - [ ] PCB design
