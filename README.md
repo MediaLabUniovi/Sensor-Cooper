@@ -136,6 +136,43 @@ ___
 
 ___
 
+<div align="justify">
+
+### To-do list [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents)
+
+The following list enumarates all the tasks involved in the research process of this project and if they have been strictly completed:
+
+- [ ] Full understanding of the development board and its pinout
+```diff
+- Some pins are conflictive due to poor manufacturer documentation, so testing is still being carried out
+```
+
+- [x] Full understanding of the sensor working mode and alternative modes
+
+- [x] Sensor code implementation
+
+- [x] LoRa code implementation
+
+- [x] Low power code implementation
+
+- [ ] Low power hardware components
+```diff
+- A transistor is being tried to be implemented so the sensor can be powered on from the board's 5V pin and powered off when goind to deep slee, but it is getting tricky
+```
+
+- [ ] PCB design
+```diff
+- As low power hardware has not been fully implemented, PCB has to wait
+```
+
+- [x] Casing 3D modeling
+      
+- [x] Data visualization app
+
+</div>
+
+___
+
 ### <p align="justify"> Component list [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents) </p>
 
 <div align="center">
