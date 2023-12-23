@@ -167,6 +167,8 @@ The following list enumarates all the tasks involved in the researching process 
 
 <div align="center">
   <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/circuit%20(1).png" width="400"  style="margin: 10px;"/>
+
+  <em>Electric schematic with the transistor</em>
 </div>
 <br/>
 
