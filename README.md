@@ -163,6 +163,15 @@ The following list enumarates all the tasks involved in the researching process 
 - board's 5V pin and powered-off when going to deep slee, but it is getting tricky
 ```
 
+</div>
+
+<div align="center">
+  <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/circuit%20(1).png" width="400"  style="margin: 10px;"/>
+</div>
+<br/>
+
+<div align="justify">
+
 - [ ] PCB design
 ```diff
 - As low power hardware has not been fully implemented, PCB has to wait
@@ -199,8 +208,6 @@ ___
 
 <div align="center">
 
-<img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/circuit%20(1).png" align="right" width="350px"/>
-
 | JSN-SR04T | Transistor | Resistor | 18650 | SYP-S0606 | LilyGO |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | `trigger` | - | - | - | - | `13` |
@@ -213,8 +220,6 @@ ___
 | - | - | - | - | `USB` | `USB` |
 | - | - | - | - | `USB` | `USB` |
 | - | - | - | `Bat Conn` | - | `Bat Conn` |
-
-<br clear="right"/>
 
 </div>
 
