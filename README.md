@@ -199,6 +199,8 @@ ___
 
 <div align="center">
 
+<img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/circuit%20(1).png" align="right" width="350px"/>
+
 | JSN-SR04T | Transistor | Resistor | 18650 | SYP-S0606 | LilyGO |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | `trigger` | - | - | - | - | `13` |
@@ -211,6 +213,8 @@ ___
 | - | - | - | - | `USB` | `USB` |
 | - | - | - | - | `USB` | `USB` |
 | - | - | - | `Bat Conn` | - | `Bat Conn` |
+
+<br clear="right"/>
 
 </div>
 
