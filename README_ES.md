@@ -25,6 +25,7 @@ ___
 ## Índice
 - [Introducción](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/README_ES.md#introducci%C3%B3n-leftwards_arrow_with_hook)
 - [Funciones principales](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/README_ES.md#-caracter%C3%ADsticas-principales-leftwards_arrow_with_hook-)
+- [Lista de tareas](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main?tab=readme-ov-file#to-do-list-leftwards_arrow_with_hook)
 - [Lista de componentes](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/README_ES.md#-lista-de-componentes-leftwards_arrow_with_hook-)
 - [Lista de conexiones](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/README_ES.md#-lista-de-conexiones-leftwards_arrow_with_hook-)
 - [Flujograma (¡Simplificado!)](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/README_ES.md#-flujograma-simplificado-leftwards_arrow_with_hook-)
@@ -136,6 +137,55 @@ ___
 
 ___
 
+<div align="justify">
+
+### Lista de tareas [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents)
+
+La lista siguiente enumera todas las tareas que conforman el proceso de investigación del proyecto y si se han completado de forma estricta:
+
+- [ ] Entendimiento total de la placa de desarrollo y sus pines
+```diff
+- Algunos pines son conflictivos debido a la falta de documentación del fabricante, por
+- lo que aún se están haciendo pruebas
+```
+
+- [x] Entendimiento total del modo de trabajo del sensor y modos alternativos
+
+- [x] Implementación por código del sensor
+
+- [x] Implementación por código de LoRa
+
+- [x] Implementación por código del modo de bajo consumo
+
+- [ ] Componentes para el modo de bajo consumo
+```diff
+- Se está intentando implementar un transistor para dejar sin 5V de alimentación al
+- sensor durante el deep sleep, pero está siendo "retorcido"
+```
+
+</div>
+
+<div align="center">
+  <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/circuit%20(1).png" width="400"  style="margin: 10px;"/>
+</div>
+<br/>
+
+<div align="justify">
+
+- [ ] Diseño de la PCB
+```diff
+- Ya que el hardware para el modo de bajo consumo aún no se ha implementado con
+- éxito, la PCB debe esperar
+```
+
+- [x] Modelado 3D de la carcasa
+      
+- [x] Aplicación para visualizar los datos
+
+</div>
+
+___
+
 ### <p align="justify"> Lista de componentes [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/README_ES.md#%C3%ADndice) </p>
 
 <div align="center">
@@ -144,6 +194,8 @@ ___
 | ------------- | ------------- |
 | Placa  | [LilyGO LoRa32 OLED v2.1_1.6](https://www.tinytronics.nl/shop/en/development-boards/microcontroller-boards/with-lora/lilygo-ttgo-t3-lora32-868mhz-v1.6.1-esp32) |
 | Sensor de distancia  | [JSN-SR04T](https://www.tinytronics.nl/shop/en/sensors/distance/waterproof-ultrasonic-sensor-jsn-sr04t) |
+| Transistor NPN  | [2N2222](https://www.amazon.es/BOJACK-Valores-General-Purpose-Transistors/dp/B07T2VBBLV/ref=sr_1_5?keywords=Transistor-npn&qid=1703287435&sr=8-5) |
+| Resistencia  | [2k2](https://www.amazon.es/BOJACK-valores-resistencias-pel%C3%ADcula-carbono/dp/B08FD1XVL6/ref=sr_1_5?keywords=resistor&qid=1703351987&sr=8-5) |
 | Batería  | [18650](https://www.tinytronics.nl/shop/en/power/batteries/18650/eve-18650-li-ion-battery-3100mah-10a-inr18650-33v) |
 | Panel solar  | [SYP-S0606](https://www.tinytronics.nl/shop/en/power/solar-energy/solar-panels/solar-panel-with-dc-dc-converter-and-usb-5v-1a) |
 | PCB  | [A medida (archivo incluido)](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main/pcb) |
@@ -157,23 +209,30 @@ ___
 
 <div align="center">
 
-| JSN-SR04T | 18650 | SYP-S0606 | LilyGO |
-| ------------- | ------------- | ------------- | ------------- |
-| `trigger` | - | - | `13` |
-| `echo` | - | - | `12` |
-| `5v` | - | - | `00` |
-| `GND` | - | - | `GND` |
-| - | `Con Bat` | - | `Con Bat` |
-| - | - | `USB` | `USB` |
+| JSN-SR04T | Transistor | Resistencia | 18650 | SYP-S0606 | LilyGO |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| `trigger` | - | - | - | - | `13` |
+| `echo` | - | - | - | - | `12` |
+| `5v` | - | - | - | - | `5v` |
+| `GND` | `C` | - | - | - | - |
+| - | `E` | - | - | - | `GND` |
+| - | `B` | `indiferente` | - | - | - |
+| - | - | `indiferente` | - | - | `15` |
+| - | - | - | - | `USB` | `USB` |
+| - | - | - | - | `USB` | `USB` |
+| - | - | - | `Con Bat` | - | `Con Bat` |
 
 </div>
 
-> En una protoboard se ve de la siguienta forma:
+> Esbozado se ve de la siguienta forma:
 
 <div align="center">
-  <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/1_ensayo.jpg" width="600"  style="margin: 10px;"/>
+  <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/sensor_cooper_v3_3_schematic.png" width="600"  style="margin: 10px;"/>
 </div>
 <br/>
+
+> [!CAUTION]
+> El modelo de placa usado en el boceto de encima es una TTGO T3 v1.3, pero sus pines corresponden con los de la v2.1_1.6
 
 > [!TIP]
 > La PCB ofrece la posibilidad de conectar un botón entre GPIO23 y GND para ser programado como se desee
