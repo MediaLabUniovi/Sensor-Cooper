@@ -214,12 +214,15 @@ ___
 
 </div>
 
-> On a breadboard it looks the following way:
+> Sketched it looks the following way:
 
 <div align="center">
   <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/sensor_cooper_v3_3_schematic.png" width="600"  style="margin: 10px;"/>
 </div>
 <br/>
+
+> [!CAUTION]
+> Board model used in the sketch above is a TTGO T3 v1.3, but pin numbers correspond to those on the v2.1_1.6
 
 > [!TIP]
 > The PCB offers the possibility to connect a button between GPIO23 and GND to be programmed as desired
