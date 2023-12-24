@@ -221,7 +221,6 @@ ___
 | - | `B` | `indiferente` | - | - | - |
 | - | - | `indiferente` | - | - | `15` |
 | - | - | - | - | `USB` | `USB` |
-| - | - | - | - | `USB` | `USB` |
 | - | - | - | `Con Bat` | - | `Con Bat` |
 
 </div>
