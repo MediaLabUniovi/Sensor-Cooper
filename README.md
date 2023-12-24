@@ -220,7 +220,6 @@ ___
 | - | `B` | `indifferent` | - | - | - |
 | - | - | `indifferent` | - | - | `15` |
 | - | - | - | - | `USB` | `USB` |
-| - | - | - | - | `USB` | `USB` |
 | - | - | - | `Bat Conn` | - | `Bat Conn` |
 
 </div>
