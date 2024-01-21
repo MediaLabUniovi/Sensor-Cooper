@@ -196,7 +196,7 @@ ___
 | ------------- | ------------- |
 | Placa  | [LilyGO LoRa32 OLED v2.1_1.6](https://www.tinytronics.nl/shop/en/development-boards/microcontroller-boards/with-lora/lilygo-ttgo-t3-lora32-868mhz-v1.6.1-esp32) |
 | Sensor de distancia  | [JSN-SR04T](https://www.tinytronics.nl/shop/en/sensors/distance/waterproof-ultrasonic-sensor-jsn-sr04t) |
-| Transistor NPN  | [2N2222](https://www.amazon.es/BOJACK-Valores-General-Purpose-Transistors/dp/B07T2VBBLV/ref=sr_1_5?keywords=Transistor-npn&qid=1703287435&sr=8-5) |
+| MOSFET Canal-N  | [-](https://www.amazon.es) |
 | Resistencia  | [2k2](https://www.amazon.es/BOJACK-valores-resistencias-pel%C3%ADcula-carbono/dp/B08FD1XVL6/ref=sr_1_5?keywords=resistor&qid=1703351987&sr=8-5) |
 | Batería  | [18650](https://www.tinytronics.nl/shop/en/power/batteries/18650/eve-18650-li-ion-battery-3100mah-10a-inr18650-33v) |
 | Panel solar  | [SYP-S0606](https://www.tinytronics.nl/shop/en/power/solar-energy/solar-panels/solar-panel-with-dc-dc-converter-and-usb-5v-1a) |
@@ -211,17 +211,16 @@ ___
 
 <div align="center">
 
-| JSN-SR04T | Transistor | Resistencia | 18650 | SYP-S0606 | LilyGO |
+| JSN-SR04T | Transistor | Resistor | 18650 Shield | SYP-S0606 | LilyGO |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | `trigger` | - | - | - | - | `13` |
 | `echo` | - | - | - | - | `12` |
-| `5v` | - | - | - | - | `5v` |
-| `GND` | `C` | - | - | - | - |
-| - | `E` | - | - | - | `GND` |
-| - | `B` | `indiferente` | - | - | - |
-| - | - | `indiferente` | - | - | `15` |
-| - | - | - | - | `USB` | `USB` |
-| - | - | - | `Con Bat` | - | `Con Bat` |
+| `5v` | `S` | - | - | - | - |
+| `GND` | - | `indiferente` | - | - | `GND` |
+| - | `G` | `indiferente` | - | - | `15` |
+| - | `D` | - | - | - | `5V` |
+| - | - | - | `USB-In` | `USB-Out` | - |
+| - | - | - | `USB-Out` | - | `USB-In` |
 
 </div>
 
