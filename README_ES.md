@@ -166,7 +166,7 @@ La lista siguiente enumera todas las tareas que conforman el proceso de investig
 </div>
 
 <div align="center">
-  <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/circuit%20(1).png" width="400"  style="margin: 10px;"/>
+  <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/circuit.png" width="400"  style="margin: 10px;"/>
   
   <em>Esquema eléctrico con el transistor</em>
 </div>
