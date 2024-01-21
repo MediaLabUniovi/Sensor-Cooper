@@ -210,17 +210,17 @@ ___
 
 <div align="center">
 
-| JSN-SR04T | Transistor | Resistor | 18650 | SYP-S0606 | LilyGO |
+| JSN-SR04T | Transistor | Resistor | 18650 Shield | SYP-S0606 | LilyGO |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | `trigger` | - | - | - | - | `13` |
 | `echo` | - | - | - | - | `12` |
-| `5v` | - | - | - | - | `5v` |
-| `GND` | `C` | - | - | - | - |
-| - | `E` | - | - | - | `GND` |
-| - | `B` | `indifferent` | - | - | - |
+| `5v` | `S` | - | - | - | - |
+| - | `D` | - | - | - | `Vin` |
+| `GND` | - | - | - | - | `GND` |
+| - | `G` | `indifferent` | - | - | - |
 | - | - | `indifferent` | - | - | `15` |
-| - | - | - | - | `USB` | `USB` |
-| - | - | - | `Bat Conn` | - | `Bat Conn` |
+| - | - | - | `USB-In` | `USB-Out` | - |
+| - | - | - | `USB-Out` | - | `USB-In` |
 
 </div>
 
