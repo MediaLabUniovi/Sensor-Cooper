@@ -217,7 +217,7 @@ ___
 | `5v` | `S` | - | - | - | - |
 | `GND` | - | `indifferent` | - | - | `GND` |
 | - | `G` | `indifferent` | - | - | `15` |
-| - | `D` | - | - | - | `Vin` |
+| - | `D` | - | - | - | `5V` |
 | - | - | - | `USB-In` | `USB-Out` | - |
 | - | - | - | `USB-Out` | - | `USB-In` |
 
