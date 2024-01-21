@@ -215,10 +215,9 @@ ___
 | `trigger` | - | - | - | - | `13` |
 | `echo` | - | - | - | - | `12` |
 | `5v` | `S` | - | - | - | - |
+| `GND` | - | `indifferent` | - | - | `GND` |
+| - | `G` | `indifferent` | - | - | `15` |
 | - | `D` | - | - | - | `Vin` |
-| `GND` | - | - | - | - | `GND` |
-| - | `G` | `indifferent` | - | - | - |
-| - | - | `indifferent` | - | - | `15` |
 | - | - | - | `USB-In` | `USB-Out` | - |
 | - | - | - | `USB-Out` | - | `USB-In` |
 
