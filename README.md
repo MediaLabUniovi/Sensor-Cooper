@@ -233,9 +233,6 @@ ___
 > [!CAUTION]
 > Board model used in the sketch above is a TTGO T3 v1.3, but pin numbers correspond to those on the v2.1_1.6
 
-> [!TIP]
-> The PCB offers the possibility to connect a button between GPIO23 and GND to be programmed as desired
-
 ___
 
 ### <p align="justify"> Flowchart (Simplified!) [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/tree/main#table-of-contents) </p>
