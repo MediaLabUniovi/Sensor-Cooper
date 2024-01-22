@@ -234,9 +234,6 @@ ___
 > [!CAUTION]
 > El modelo de placa usado en el boceto de encima es una TTGO T3 v1.3, pero sus pines corresponden con los de la v2.1_1.6
 
-> [!TIP]
-> La PCB ofrece la posibilidad de conectar un botón entre GPIO23 y GND para ser programado como se desee
-
 ___
 
 ### <p align="justify"> Flujograma (¡Simplificado!) [:leftwards_arrow_with_hook:](https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/README_ES.md#%C3%ADndice) </p>
