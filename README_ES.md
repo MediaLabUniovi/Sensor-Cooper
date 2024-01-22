@@ -104,7 +104,7 @@ ___
 - <p align="justify"> PCB a medida </p>
 
   <div align="center">
-    <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202023-10-04%20142016.png" width="600"  style="margin: 10px;"/>
+    <img src="https://github.com/medialablpwan/lorawaterlevelmonitoring/blob/main/pics/Screenshot%202024-01-22%20172558.png" width="600"  style="margin: 10px;"/>
   </div>
   <br/>
 
