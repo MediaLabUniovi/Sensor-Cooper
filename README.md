@@ -195,7 +195,7 @@ ___
 | ------------- | ------------- |
 | Dev Module  | [LilyGO LoRa32 OLED v2.1_1.6](https://www.tinytronics.nl/shop/en/development-boards/microcontroller-boards/with-lora/lilygo-ttgo-t3-lora32-868mhz-v1.6.1-esp32) |
 | Distance sensor  | [JSN-SR04T](https://www.tinytronics.nl/shop/en/sensors/distance/waterproof-ultrasonic-sensor-jsn-sr04t) |
-| N-Channel MOSFET  | [-](https://www.amazon.es) |
+| N-Channel MOSFET  | [IRF540N](https://www.amazon.es/AUKENIEN-Transistor-IRF9540N-Transistores-potencia/dp/B09TJJJXFY/ref=sr_1_7?crid=32LB9EZ8Q81R0&dib=eyJ2IjoiMSJ9.UqJKtI1towT4naZiatE1UAz3Y34XB4iKgzo6DKubwUI4RG1qKF_oX4Un0vPC8oIiA0EFIXieDXkMAloim0p3wd53thboFPEwhQTLzEYASTn-ir9NuyrY-VBMWOrpUmAWkdOI0-NIpeF4CGnXEBoyOUkkiZ55dz6yiT-UVQ5KhHcHhs34AOguiHi3PlFpSBtSQITXz6c9NVWxuNR-AgDC0xPEYvXwdFZ6dJQA9_fEU7LkaFrESMUXJF041slnfQtWcSPyd30nK2G8wFKLq59d9Q-yjADI9jY9gAWg0tpO2wI.uLG5EZvlmd2_UDPlM2LwyNBqoAfxE2lxi6x1rXETEug&dib_tag=se&keywords=irf540n&qid=1711314804&sprefix=IRF%2Caps%2C88&sr=8-7&th=1) |
 | Resistor  | [2k2](https://www.amazon.es/BOJACK-valores-resistencias-pel%C3%ADcula-carbono/dp/B08FD1XVL6/ref=sr_1_5?keywords=resistor&qid=1703351987&sr=8-5) |
 | Battery  | [18650](https://www.tinytronics.nl/shop/en/power/batteries/18650/eve-18650-li-ion-battery-3100mah-10a-inr18650-33v) |
 | Solar panel  | [SYP-S0606](https://www.tinytronics.nl/shop/en/power/solar-energy/solar-panels/solar-panel-with-dc-dc-converter-and-usb-5v-1a) |
